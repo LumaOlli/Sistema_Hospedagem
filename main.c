@@ -5,6 +5,8 @@ int main(void){
 
     guest * creat_reservation(char *reverse_data);
 
+
+
     /*printf("Menu: ");
     printf("1.  ");
     printf("2. ");
