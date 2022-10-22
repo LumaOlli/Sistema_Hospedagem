@@ -49,6 +49,9 @@ guest *creat_reservation(char *reverse_data){
     FILE *arq;
     arq = fopen(reverse_data, "a");
 
-    fprintf(arq, "%s\n", g->bedRoom.localization);
+    if(g == NULL){
+        printf("Error opening file");
+        exit(0);
+    }
     return(g);
 } 
