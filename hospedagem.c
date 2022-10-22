@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "hospedagem.h"
 
@@ -16,13 +17,12 @@ struct Guest{
     bedroom bedRoom;
 };
 
-/*guest *creat_reservation(char *reverse_data){
-    guest *g;
-    g = (guest *) malloc(sizeof(guest));
+guest *creat_reservation(char *reverse_data){
+    guest *g = (guest *) malloc(sizeof(guest));
     
     if(g == NULL){
         printf("insufficient memory");
-        return 1;
+        exit(1);
     }
 
     printf("Enter the name: ");
@@ -35,18 +35,18 @@ struct Guest{
     scanf("%d", &g->documentation);
 
     printf("Enter the number: ");
-    scanf("%d", &g->bedRoom->number);
+    scanf("%d", &g->bedRoom.number);
 
     printf("Enter the avaibility: ");
-    scanf("%[^\n]", g->bedRoom->availability);
+    scanf("%[^\n]", g->bedRoom.availability);
 
     printf("Enter the price: ");
-    scanf("%f", &g->bedRoom->price);
+    scanf("%f", &g->bedRoom.price);
 
     printf("Enter the localization: ");
-    scanf("%[^\n]", g->bedRoom->localization);
+    scanf("%[^\n]", g->bedRoom.localization);
 
-
-
+    FILE *arq;
+    arq = fopen(reserve_data, "a");
     return(g);
-} */
+} 
