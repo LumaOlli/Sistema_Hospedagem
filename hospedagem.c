@@ -53,5 +53,9 @@ guest *creat_reservation(char *reverse_data){
         printf("Error opening file");
         exit(0);
     }
+
+    fprintf(arq, "Number: %d\nAvailability: %s\nPrice: %f\nLocalization: %s",g->bedRoom.number, g->bedRoom.availability, g->bedRoom.price, g->bedRoom.localization);
+    fprintf(arq, "Name: %s\nLength of stay: %d\nDcumentation: %d\n", g->name, g->length_of_stay, g->documentation);
+    
     return(g);
 } 
