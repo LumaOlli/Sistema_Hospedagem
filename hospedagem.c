@@ -15,7 +15,7 @@ struct Guest{
     int length_of_stay;
     int documentation;
     bedroom bedRoom;
-    struct guest *proximo;
+    struct Guest *proximo;
 };
 
 void *creat_reservation(){
