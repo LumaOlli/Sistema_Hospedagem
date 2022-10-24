@@ -29,5 +29,7 @@ void *creat_reservation(){
 
     next_guest = start_guest;
 
+    
+
     return 0;
 } 
