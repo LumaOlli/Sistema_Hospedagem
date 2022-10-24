@@ -1,10 +1,6 @@
 #include "hospedagem.h"
 
 int main(void){
-    guest *g=  creat_reservation("reverse_data");
-
-    guest * creat_reservation(char *reverse_data);
-
 
 
     /*printf("Menu: ");
