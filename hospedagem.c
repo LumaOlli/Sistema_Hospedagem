@@ -17,7 +17,8 @@ struct Guest{
     bedroom bedRoom;
 };
 
-guest *creat_reservation(char *reverse_data){
+void *creat_reservation(){
+    
     
     return 0;
 } 
