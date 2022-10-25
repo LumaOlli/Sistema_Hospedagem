@@ -21,13 +21,14 @@ int main(void){
 
     switch(choise){
     case 1:{
-      printf("Seu nome é Amul");
+        /*chamar função*/
         break;
     }
     case 2:{
-      printf("Você tem 20 anos");
+        /*chamar função*/
         break;
     }
+    /* cases 3 ate 7*/
     default:
     if(choise == 8){
       continue;
