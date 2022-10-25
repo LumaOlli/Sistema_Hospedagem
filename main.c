@@ -1,17 +1,41 @@
 #include "hospedagem.h"
 
 int main(void){
+    int choise=1;
+    
+  while(choise != 8){
+    printf("\n                   MENU                       \n");
+    printf("================================================\n");
+    printf("1. Make reservation\n");
+    printf("2. Relete reservation\n");
+    printf("3. List reservation\n");
+    printf("4. Search for reservation\n");
+    printf("5. Edit reservation\n");
+    printf("6. Check available rooms\n");
+    printf("7. Consult number of guests\n");
+    printf("8. Go out\n");
+    printf("================================================\n");
+    
+    printf("Inform option: ");
+    scanf("%d", &choise);
 
+    switch(choise){
+    case 1:{
+      printf("Seu nome é Amul");
+        break;
+    }
+    case 2:{
+      printf("Você tem 20 anos");
+        break;
+    }
+    default:
+    if(choise == 8){
+      continue;
+      }
+    }
+  }
+  if(choise==8)
+  printf("\n\n O Programa foi fechado");
+}
 
-    /*printf("Menu: ");
-    printf("1.  ");
-    printf("2. ");
-    printf("3. ");
-    printf("4. ");
-    printf("5. ");
-    printf("6. ");
-    printf("7. ");
-    printf("8. Go out");
-*/
-    return 0;
 }
