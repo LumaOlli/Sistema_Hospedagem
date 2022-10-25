@@ -50,6 +50,13 @@ void *creat_reservation(){
         printf("Do you wish to continue?");
         printf(" <1> YES  <2> NO \n");
         scanf("%d", &option);
+
+        if(option == 1){
+            next_guest-> next=(guest*)malloc(sizeof(guest));
+            next_guest= next_guest->next;
+        }
+        else
+        break;
     }
 
     return 0;
