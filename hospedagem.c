@@ -22,6 +22,8 @@ void *creat_reservation(){
     guest * start_guest;
     guest * next_guest;
 
+    int option;
+
     start_guest = (guest*)malloc(sizeof(guest));
     if(start_guest == NULL){
         exit(1);
@@ -44,6 +46,10 @@ void *creat_reservation(){
         scanf("%f", &next_guest->bedRoom.price);
         printf("Inform the localization: ");
         scanf(" %[\^n]", next_guest->bedRoom.localization);
+
+        printf("Do you wish to continue?");
+        printf(" <1> YES  <2> NO \n");
+        scanf("%d", &option);
     }
 
     return 0;
