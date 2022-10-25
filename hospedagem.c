@@ -33,19 +33,19 @@ void *creat_reservation(){
 
     while(1){
         printf("Inform the name: ");
-        scanf(" %[\^n]", next_guest->name);
+        scanf(" %[^\n]", next_guest->name);
         printf("Inform the length of stay: ");
-        scanf(" %[\^n]", next_guest->length_of_stay);
+        scanf(" %[^\n]", next_guest->length_of_stay);
         printf("Inform the documentation: ");
         scanf("%d", &next_guest->documentation);
         printf("Inform the number: ");
         scanf("%d", &next_guest->bedRoom.number);    
         printf("Inform the availability:  ");
-        scanf(" %[\^n]", &next_guest->bedRoom.availability);
+        scanf(" %[^\n]", &next_guest->bedRoom.availability);
         printf("Inform the price: ");
         scanf("%f", &next_guest->bedRoom.price);
         printf("Inform the localization: ");
-        scanf(" %[\^n]", next_guest->bedRoom.localization);
+        scanf(" %[^\n]", next_guest->bedRoom.localization);
 
         printf("Do you wish to continue?");
         printf(" <1> YES  <2> NO \n");
