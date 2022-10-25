@@ -38,5 +38,3 @@ int main(void){
   if(choise==8)
   printf("\n\n O Programa foi fechado");
 }
-
-}
