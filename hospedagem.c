@@ -24,7 +24,7 @@ void *creat_reservation(){
 
     int option;
 
-    start_guest = (guest*)malloc(sizeof(guest));
+    start_guest = malloc(sizeof(guest));
     if(start_guest == NULL){
         exit(1);
     }
@@ -35,13 +35,13 @@ void *creat_reservation(){
         printf("Inform the name: ");
         scanf(" %[^\n]", next_guest->name);
         printf("Inform the length of stay: ");
-        scanf(" %[^\n]", next_guest->length_of_stay);
+        scanf("%d", &next_guest->length_of_stay);
         printf("Inform the documentation: ");
         scanf("%d", &next_guest->documentation);
         printf("Inform the number: ");
         scanf("%d", &next_guest->bedRoom.number);    
         printf("Inform the availability:  ");
-        scanf(" %[^\n]", &next_guest->bedRoom.availability);
+        scanf(" %[^\n]", next_guest->bedRoom.availability);
         printf("Inform the price: ");
         scanf("%f", &next_guest->bedRoom.price);
         printf("Inform the localization: ");
