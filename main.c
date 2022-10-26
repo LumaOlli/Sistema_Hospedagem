@@ -21,6 +21,7 @@ int main(void){
 
     switch(choise){
     case 1:{
+        /*system("cls");  --lembrar de colocar em todos os cases*/ 
         /*chamar função*/
         break;
     }
