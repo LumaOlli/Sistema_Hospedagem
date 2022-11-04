@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hospedagem.h"
+#include "hospedagem.c"
 
 int main(){
     
-    int opcao = 1;
+  int opcao = 1;
     
-    while(opcao != 8){
+  while(opcao != 8){
 		printf("\n===============================");
 		printf("\n            MENU\n");
 		printf("     1 - Marcar Reserva\n");
@@ -27,8 +27,8 @@ int main(){
 			case 1:
 				criar_reserva;
 				break;
-			
-		}
-	}
+      }
+    }
+  }
 	
-}
+}	
