@@ -1,40 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "hospedagem.h"
 
-int main(void){
-    int choise=1;
+int main(){
     
-  while(choise != 8){
-    printf("\n                   MENU                       \n");
-    printf("================================================\n");
-    printf("1. Make reservation\n");
-    printf("2. Relete reservation\n");
-    printf("3. List reservation\n");
-    printf("4. Search for reservation\n");
-    printf("5. Edit reservation\n");
-    printf("6. Check available rooms\n");
-    printf("7. Consult number of guests\n");
-    printf("8. Go out\n");
-    printf("================================================\n");
+    int opcao = 1;
     
-    printf("Inform option: ");
-    scanf("%d", &choise);
-
-    switch(choise){
-    case 1:{
-        /*chamar função*/
-        break;
-    }
-    case 2:{
-        /*chamar função*/
-        break;
-    }
-    /* cases 3 ate 7*/
-    default:
-    if(choise == 8){
-      continue;
-      }
-    }
-  }
-  if(choise==8)
-  printf("\n\n O Programa foi fechado");
+    while(opcao != 8){
+		printf("\n===============================");
+		printf("\n            MENU\n");
+		printf("     1 - Marcar Reserva\n");
+		printf("     2 - Excluir Reserva\n");
+		printf("     3 - Listar Reserva\n");
+		printf("     4 - Buscar Reserva\n");
+		printf("     5 - Editar Reserva\n");
+		printf("     6 - Verificar disponibilidade de quartos\n");
+		printf("     7 - Consultar quantidade de hospedes\n");
+		printf("     8 - Sair\n");
+		printf("\n==================================\n");
+		
+		printf("\nInforme a acao que deseja realizar: ");
+		scanf("%d", &opcao);
+		
+		switch(opcao){
+			
+			case 1:
+				criar_reserva;
+				break;
+			
+		}
+	}
+	
 }
