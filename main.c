@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hospedagem.h"
+#include "hospedagem.c"
 
 int main(){
     

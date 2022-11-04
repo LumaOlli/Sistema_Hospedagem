@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -77,3 +78,5 @@ int marcar_reserva(){
 }
 
 void excluir_reserva()
+=======
+>>>>>>> f45ee8f5b7b124c78dcaef83a21855ded7976bc6
