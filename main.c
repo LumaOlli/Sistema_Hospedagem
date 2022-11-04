@@ -6,6 +6,7 @@ int main(){
     
     int opcao = 1;
     
+<<<<<<< HEAD
     while(opcao != 8){
 		printf("\n===============================");
 		printf("\n            MENU\n");
@@ -31,4 +32,28 @@ int main(){
 		}
 	}
 	
+=======
+    printf("Inform option: ");
+    scanf("%d", &choise);
+
+    switch(choise){
+    case 1:{
+        /*system("cls");  --lembrar de colocar em todos os cases*/ 
+        /*chamar função*/
+        break;
+    }
+    case 2:{
+        /*chamar função*/
+        break;
+    }
+    /* cases 3 ate 7*/
+    default:
+    if(choise == 8){
+      continue;
+      }
+    }
+  }
+  if(choise==8)
+  printf("\n\n O Programa foi fechado");
+>>>>>>> 639e832db6fa75eb1f7220050a395cf74eba722c
 }
