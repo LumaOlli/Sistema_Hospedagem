@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hospedagem.c"
+#include "hospedagem.h"
 
 int main(){
     
@@ -27,8 +27,8 @@ int main(){
 			case 1:
 				criar_reserva;
 				break;
-      }
-    }
-  }
+			
+		}
+	}
 	
-}	
+}
