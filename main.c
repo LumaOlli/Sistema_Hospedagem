@@ -8,7 +8,7 @@ int main(){
     
   while(opcao != 8){
 		printf("\n===============================");
-		printf("\n            MENU\n");
+		printf("\n            MENU		\n");
 		printf("     1 - Marcar Reserva\n");
 		printf("     2 - Excluir Reserva\n");
 		printf("     3 - Listar Reserva\n");
