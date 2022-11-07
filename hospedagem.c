@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> b714e2d18d91e35e96624d80bc8879d2f7c7c9c4
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -80,9 +76,6 @@ int marcar_reserva(){
 	}
 }
 
-void excluir_reserva()
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f45ee8f5b7b124c78dcaef83a21855ded7976bc6
->>>>>>> b714e2d18d91e35e96624d80bc8879d2f7c7c9c4
+void excluir_reserva(){
+
+}
