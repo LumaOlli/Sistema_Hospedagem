@@ -64,14 +64,7 @@ int marcar_reserva(){
 				if(*(pesquisar + i) != c){//se um caracter subsequente for diferente da pesquisar vai sair do loop
 					break;
 				}
-			}   
-			
-			if(i == strlen(pesquisar)){//se i == qtd 
-				while((fgets(infos, sizeof(infos)), infoHotel) != NULL){
-					
-				}
-				break;
-			}	
+			}   	
 		}
 	}
 }
