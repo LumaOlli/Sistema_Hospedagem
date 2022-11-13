@@ -69,7 +69,7 @@ Lista *excluir_reserva(Lista *nova_reserva, int elemento){
 
 void listar_reserva(){
 
-	FILE *listar_a_reserva = fopen("ListarReserva,txt", "rw");
+	FILE *listar_a_reserva = fopen("ListarReserva.txt", "rw");
 
 	if(listar_a_reserva == NULL){
 		printf("Nao for possivel abrir o arquivo!!\n");
