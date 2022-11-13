@@ -11,64 +11,80 @@ struct hospede{
 
 struct lista{
 	Hospede info;
-	Lista *prox_hospede;
+	Lista *nova_reserva;
 };
 
 int marcar_reserva(){
-	
-	Hospede *novo_hospede;
-	Lista *prox_hospede;
+	Hospede *nova_reserva;
 	int opcao;
-	
-	novo_hospede = (Lista*)malloc(sizeof(Lista));
-	
-	if(novo_hospede == NULL){
-		exit (1);
-	}
-	
-	do{
-		printf("Informe o nome: ");
-		scanf("%[\n]", &novo_hospede->nome);
-		printf("Informe a sua estadia: ");
-		scanf("%d", &novo_hospede->duracao_de_estadia);
-		printf("Agora informe o seu documento: ");
-		scanf("%[\n]", &novo_hospede->documento);
-		
-		printf("Deseja inserir um novo hospede?\n");
-		printf("   <1> Sim           <2>Não");
+
+	nova_reserva = (Lista*)malloc(sizeof(Lista));
+
+	while(opcao == 1){
+
+		printf("Informe o nome: \n");
+		scanf(" %[^\n]", &nova_reserva->nome);
+		system("cls");
+		printf("Informe a duracao da estadia: \n");
+		scanf("%d", &nova_reserva->duracao_de_estadia);
+		system("cls");
+		printf("Informe o documento: \n");
+		scanf(" %[^\n]", &nova_reserva->documento);
+		system("cls");
+
+		printf("Deseja continuar marcando nova reserva?\n");
+		printf("    <1-SIM>               <2-NAO>\n");
 		scanf("%d", &opcao);
-		
-	}while(opcao == 2);
-	
-	FILE *infoHotel = fopen("quarto.txt", "r");
-	
-	if(infoHotel == NULL){
-		printf("ERRO AO ABRIR ARQUIVO!\n");
-	}else{
-		printf("AGUARDE UM MOMENTO...\n");
+
 	}
-	
-	char c, dados[]="quarto.txt", infos[50];
-	int i;
-	char *pesquisar = "Disponibilidade: Sim";
-	
-	while((c = fgetc(infoHotel)) != EOF){//c vai ser igual a uma palavra no arquivo enquanto não for o final do arquivo
+}	
+
+Lista *excluir_reserva(Lista *nova_reserva, int elemento){
+
+	Lista *anterior =NULL;
+	Lista *percorre = nova_reserva;
+
+	while(percorre->nova_reserva != elemento){
 		
-		if(c == pesquisar){//primeiro caractere da string que que estamos procurando
-		
-			for(i = 0; i < strlen(pesquisar); i++){//cada caractere que da string que vai ser comparado com o próximo 
-				c = fgetc(infoHotel);//vai ler mais um caracter
-				if(c == EOF){//se chegar no final vai parar
-					break;
-				}
-				if(*(pesquisar + i) != c){//se um caracter subsequente for diferente da pesquisar vai sair do loop
-					break;
-				}
-			}   	
+		if(percorre == NULL){
+			anterior = percorre;
+			percorre = percorre->nova_reserva;
+			
+			return percorre;
 		}
+		
+		if(anterior == NULL){
+			nova_reserva = percorre->nova_reserva;
+		}
+
+		else{
+			anterior->nova_reserva = percorre->nova_reserva; 
+		}
+
+		free(percorre);
+
+		return printf("A reserva solicitada foi excluida com sucesso!!\n");
 	}
 }
 
-void excluir_reserva(){
+void listar_reserva(){
 
+	FILE *listar_a_reserva = fopen("ListarReserva,txt", "rw");
+
+	if(listar_a_reserva == NULL){
+		printf("Nao for possivel abrir o arquivo!!\n");
+		exit -1;		
+	}
+}
+
+Lista *buscar_reserva(int reserva, Lista *nova_reserva){
+	Lista *percorre;
+
+	for(percorre=nova_reserva; percorre != NULL; percorre=percorre->nova_reserva){
+		if(percorre->info == reserva){
+			return percorre;
+		}
+	}
+
+	return NULL;
 }
