@@ -81,9 +81,9 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 	Lista *percorre;
 
 	for(percorre=nova_reserva; percorre != NULL; percorre=percorre->nova_reserva){
-		if(percorre->info == reserva){
+		if (percorre->info == reserva){
 			return percorre;
-		}
+		}		
 	}
 
 	return NULL;

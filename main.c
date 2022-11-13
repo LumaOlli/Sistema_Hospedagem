@@ -97,7 +97,9 @@ int main(void){
                 break;
 
             case OPCAO5:
-
+				printf("Por favor, insira a posição da reserva para edição:");
+            	int editar_index;
+            	scanf("%d", &editar_index);
                 break;
 
             case OPCAO6:
