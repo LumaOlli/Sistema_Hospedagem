@@ -1,34 +1,133 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "hospedagem.c"
+#include <stdarg.h>
+#include <windows.h>
 
-int main(){
+#define TITULO_OPCAO1 "realizar reserva"
+#define TITULO_OPCAO2 "excluir reserva"
+#define TITULO_OPCAO3 "listar reserva"
+#define TITULO_OPCAO4 "buscar reserva"
+#define TITULO_OPCAO5 "editar reserva"
+#define TITULO_OPCAO6 "consultar quartos disponiveis"
+#define TITULO_OPCAO7 "consultar quantitativo de hospedes"
+#define TITULO_OPCAO8 "sair do programa"
+
+#define N_OPCOES 8
+#define OPCAO1 '1'
+#define OPCAO2 '2'
+#define OPCAO3 '3'
+#define OPCAO4 '4'
+#define OPCAO5 '5'
+#define OPCAO6 '6'
+#define OPCAO7 '7'
+#define OPCAO8 '8'
+
+ void LimpaBuffer(void){
+    int ValorLido;
     
-  int opcao = 1;
-    
-  while(opcao != 8){
-		printf("\n===============================");
-		printf("\n            MENU		\n");
-		printf("     1 - Marcar Reserva\n");
-		printf("     2 - Excluir Reserva\n");
-		printf("     3 - Listar Reserva\n");
-		printf("     4 - Buscar Reserva\n");
-		printf("     5 - Editar Reserva\n");
-		printf("     6 - Verificar disponibilidade de quartos\n");
-		printf("     7 - Consultar quantidade de hospedes\n");
-		printf("     8 - Sair\n");
-		printf("\n==================================\n");
-		
-		printf("\nInforme a acao que deseja realizar: ");
-		scanf("%d", &opcao);
-		
-		switch(opcao){
-			
-			case 1:
-				criar_reserva;
-				break;
-			
-		}
-	}
-	
+    do{
+        ValorLido = getchar();
+    }while ((ValorLido != '\n') && (ValorLido != EOF));
+ }
+
+int LeOpcao(int menorValor, int maiorValor){
+
+    int op;
+
+    while(1){
+        printf("\nInforme sua opcao: ");
+
+        op = getchar();
+
+        if(op >= menorValor && op <= maiorValor){
+            LimpaBuffer();
+            break;
+        }
+        else{
+            printf("\nOpcao invalida. Tente novamente!");
+            printf("\nOpcao deve estar entre %c e %c.\n", menorValor, maiorValor);
+
+            LimpaBuffer();
+        }
+    }
+    return op;
+}
+
+void ApresentaMenu(int nItens, int menorOpcao, ...){
+    int i;
+
+    va_list argumentos;
+
+    va_start(argumentos, menorOpcao);
+
+    for(i=0; i< nItens; i++){
+        printf("%c - %s \n", menorOpcao++, va_arg(argumentos, char*));
+    }
+
+    va_end(argumentos);
+}
+
+int main(void){
+    unsigned char op;
+    unsigned int saida = 0;
+
+    do{
+        ApresentaMenu (N_OPCOES, OPCAO1,
+                        TITULO_OPCAO1, TITULO_OPCAO2,
+                        TITULO_OPCAO3, TITULO_OPCAO4,
+                        TITULO_OPCAO5, TITULO_OPCAO6, 
+                        TITULO_OPCAO7, TITULO_OPCAO8);
+
+        op = LeOpcao(OPCAO1, OPCAO1 + N_OPCOES - 1);
+
+        switch(op){
+            
+            case OPCAO1:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO2:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO3:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO4:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO5:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO6:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO7:
+                beep(1000,500);
+
+                break;
+
+            case OPCAO8:
+                beep(1000,500);
+
+                saida = 1;
+                printf("Obrigado por usar este programa\n");
+                break;
+        
+            default:
+                printf("Estee programa possui um bug!\n");
+                return 1;   
+        }
+    }while(!saida);
+
+    return 0;
 }
