@@ -23,13 +23,13 @@ int realizar_reserva(){
 	while(opcao == 1){
 
 		printf("Informe o nome: \n");
-		scanf(" %[^\n]", &nova_reserva->nome);
+		scanf(" %[^\n]", nova_reserva->nome);
 		system("cls");
 		printf("Informe a duracao da estadia: \n");
 		scanf("%d", &nova_reserva->duracao_de_estadia);
 		system("cls");
 		printf("Informe o documento: \n");
-		scanf(" %[^\n]", &nova_reserva->documento);
+		scanf(" %[^\n]", nova_reserva->documento);
 		system("cls");
 
 		printf("Deseja continuar marcando nova reserva?\n");
