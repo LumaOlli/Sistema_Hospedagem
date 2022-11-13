@@ -87,7 +87,6 @@ int main(void){
                 break;
 
             case OPCAO3:
-				listar_reserva();
                 break;
 
             case OPCAO4:

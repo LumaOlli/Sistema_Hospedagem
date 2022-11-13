@@ -73,7 +73,7 @@ void listar_reserva(){
 
 	if(listar_a_reserva == NULL){
 		printf("Nao for possivel abrir o arquivo!!\n");
-		exit -1;		
+		exit (1);		
 	}
 }
 
