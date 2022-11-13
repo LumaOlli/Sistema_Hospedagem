@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include <windows.h>
+#include "hospedagem.h"
 
 #define TITULO_OPCAO1 "realizar reserva"
 #define TITULO_OPCAO2 "excluir reserva"

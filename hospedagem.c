@@ -10,7 +10,7 @@ struct hospede{
 };
 
 struct lista{
-	Hospede info;
+	int info;
 	Lista *nova_reserva;
 };
 
@@ -78,7 +78,7 @@ void listar_reserva(){
 }
 
 Lista *buscar_reserva(int reserva, Lista *nova_reserva){
-	Lista *percorre;
+	Lista * percorre;
 
 	for(percorre=nova_reserva; percorre != NULL; percorre=percorre->nova_reserva){
 		if (percorre->info == reserva){
