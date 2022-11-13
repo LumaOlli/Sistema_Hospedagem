@@ -80,44 +80,35 @@ int main(void){
         op = LeOpcao(OPCAO1, OPCAO1 + N_OPCOES - 1);
 
         switch(op){
-            
             case OPCAO1:
-                beep(1000,500);
-
+				criar_reserva();
                 break;
 
             case OPCAO2:
-                beep(1000,500);
 
                 break;
 
             case OPCAO3:
-                beep(1000,500);
 
                 break;
 
             case OPCAO4:
-                beep(1000,500);
 
                 break;
 
             case OPCAO5:
-                beep(1000,500);
 
                 break;
 
             case OPCAO6:
-                beep(1000,500);
 
                 break;
 
             case OPCAO7:
-                beep(1000,500);
 
                 break;
 
             case OPCAO8:
-                beep(1000,500);
 
                 saida = 1;
                 printf("Obrigado por usar este programa\n");
@@ -130,4 +121,3 @@ int main(void){
     }while(!saida);
 
     return 0;
-}
