@@ -90,7 +90,7 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 }
 
 void editar_reserva(Hospede *nova_reserva, int index){
-	printf("Editar reserva %s\n", nova_reserva[index].nome);
+	printf("Editar reserva %s \n", nova_reserva[index].nome);
 	printf("Novo nome: ");
 	fflush(stdin); //Sua finalidade é limpar (ou liberar) o buffer de saída
 	fgets(nova_reserva[index].nome, 100, stdin);	// lê uma cadeia de caracteres do argumento stream de entrada e o armazena em str
