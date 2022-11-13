@@ -81,25 +81,26 @@ int main(void){
 
         switch(op){
             case OPCAO1:
-				criar_reserva();
+				realizar_reserva();
                 break;
 
             case OPCAO2:
-
+				excluir_reserva(nova_reserva, elemento);
                 break;
 
             case OPCAO3:
-
+				listar_reserva();
                 break;
 
             case OPCAO4:
-
+				buscar_reserva(reserva, nova_reserva);
                 break;
 
             case OPCAO5:
 				printf("Por favor, insira a posição da reserva para edição:");
             	int editar_index;
             	scanf("%d", &editar_index);
+				editar_reserva (nova_reserva, editar_index);
                 break;
 
             case OPCAO6:

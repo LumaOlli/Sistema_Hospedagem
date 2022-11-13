@@ -14,7 +14,7 @@ struct lista{
 	Lista *nova_reserva;
 };
 
-int marcar_reserva(){
+int realizar_reserva(){
 	Hospede *nova_reserva;
 	int opcao;
 

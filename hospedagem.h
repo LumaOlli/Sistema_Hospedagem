@@ -6,7 +6,7 @@ typedef struct hospede Hospede;
 
 typedef struct lista Lista;
 
-int criar_reserva();
+int realizar_reserva();
 
 Lista *excluir_reserva(Lista *nova_reserva, int elemento);
 
