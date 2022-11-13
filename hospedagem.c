@@ -72,7 +72,7 @@ void listar_reserva(){
 	FILE *listar_a_reserva = fopen("ListarReserva.txt", "rw");
 
 	if(listar_a_reserva == NULL){
-		printf("Nao for possivel abrir o arquivo!!\n");
+		printf("Nao foi possivel abrir o arquivo!!\n");
 		exit (1);		
 	}
 }
@@ -90,7 +90,7 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 }
 
 void editar_reserva(Hospede *nova_reserva, int index){
-	printf("Editar reserva %s", nova_reserva[index].nome);
+	printf("Editar reserva %s\n", nova_reserva[index].nome);
 	printf("Novo nome: ");
 	fflush(stdin); //Sua finalidade é limpar (ou liberar) o buffer de saída
 	fgets(nova_reserva[index].nome, 100, stdin);	// lê uma cadeia de caracteres do argumento stream de entrada e o armazena em str
