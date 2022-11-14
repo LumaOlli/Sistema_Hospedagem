@@ -18,7 +18,7 @@ Hospede *realizar_reserva(){
 	Hospede *nova_reserva;
 	int opcao;
 
-	nova_reserva = (Lista*)malloc(sizeof(Lista));
+	nova_reserva=(Lista*)malloc(sizeof(Lista));
 
 	while(opcao == 1){
 
@@ -45,7 +45,7 @@ Lista *excluir_reserva(Lista *nova_reserva, int elemento){
 	Lista *anterior =NULL;
 	Lista *percorre = nova_reserva;
 
-	while(percorre->nova_reserva != elemento){
+	while(percorre->nova_reserva = elemento){
 		
 		if(percorre == NULL){
 			anterior = percorre;
