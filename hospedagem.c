@@ -89,17 +89,17 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 	return NULL;
 }
 
-void editar_reserva(Hospede *nova_reserva, int index){
+/*void editar_reserva(Hospede *nova_reserva, int index){
 	printf("Editar reserva %s \n", nova_reserva[index].nome);
 	printf("Novo nome: ");
 	fflush(stdin); //Sua finalidade é limpar (ou liberar) o buffer de saída
 	fgets(nova_reserva[index].nome, 100, stdin);	// lê uma cadeia de caracteres do argumento stream de entrada e o armazena em str
 
-	printf("Novo tempo de duracao: ");
+	printf("Novo tempo de estadia: ");
 	fflush(stdin); //Sua finalidade é limpar (ou liberar) o buffer de saída
 	fgets(nova_reserva[index].duracao_de_estadia, 0, stdin);	// lê uma cadeia de caracteres do argumento stream de entrada e o armazena em str
 
 	printf("Novo documento: ");
 	fflush(stdin); //Sua finalidade é limpar (ou liberar) o buffer de saída
 	fgets(nova_reserva[index].documento, 80, stdin);	// lê uma cadeia de caracteres do argumento stream de entrada e o armazena em str
-}
+}*/
