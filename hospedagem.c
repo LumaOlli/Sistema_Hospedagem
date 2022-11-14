@@ -37,7 +37,7 @@ Hospede *realizar_reserva(){
 		scanf("%d", &opcao);
 
 	}
-	return Hospede;
+	return nova_reserva;
 }	
 
 Lista *excluir_reserva(Lista *nova_reserva, int elemento){
@@ -91,6 +91,18 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 }
 
 void editar_reserva(Hospede *nova_reserva, int index){
-	printf("A escolha da edição foi %s", nova_reserva[index].nome);
+	printf("================================================================");
+	printf("                        EDITAR RESERVA                          ");
+	printf("================================================================");
 
+	printf("A escolha da edição foi %s\n", nova_reserva[index].nome);
+	printf("Procesando..\n");
+	printf("Nome: \n");
+	scanf(" %[^\n]", nova_reserva[index].nome);
+	
+	printf("Tempo de estadia: \n");
+	scanf("%d", &nova_reserva[index].duracao_de_estadia);
+
+	printf("Documento: \n");
+	scanf(" %[^\n]", nova_reserva[index].documento);
 }
