@@ -84,16 +84,20 @@ int main(void){
                 break;
 
             case OPCAO2:
-                
                 break;
 
             case OPCAO3:
+                listar_reserva();
                 break;
 
             case OPCAO4:
                 break;
 
             case OPCAO5:
+                printf("Por favor, insira a posição da reserva para edição:");
+            	int edit_index;
+            	scanf("%d", &edit_index);
+				editar_reserva(atualizar_reserva, edit_index);
                 break;
 
             case OPCAO6:

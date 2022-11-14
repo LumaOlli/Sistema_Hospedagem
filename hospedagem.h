@@ -16,4 +16,4 @@ void listar_reserva();
 
 Lista *buscar_reserva(int reserva, Lista *nova_reserva);
 
-void editar_reserva(Hospede *nova_reserva, int index);
+void editar_reserva(Hospede *atualizar_reserva, int index);

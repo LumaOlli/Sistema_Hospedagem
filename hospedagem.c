@@ -90,19 +90,19 @@ Lista *buscar_reserva(int reserva, Lista *nova_reserva){
 	return NULL;
 }
 
-void editar_reserva(Hospede *nova_reserva, int index){
+void editar_reserva(Hospede *atualizar_reserva, int index){
 	printf("================================================================");
 	printf("                        EDITAR RESERVA                          ");
 	printf("================================================================");
 
-	printf("A escolha da edição foi %s\n", nova_reserva[index].nome);
+	printf("A escolha da edição foi %s\n", atualizar_reserva[index].nome);
 	printf("Procesando..\n");
 	printf("Nome: \n");
-	scanf(" %[^\n]", nova_reserva[index].nome);
+	scanf(" %[^\n]", atualizar_reserva[index].nome);
 	
 	printf("Tempo de estadia: \n");
-	scanf("%d", &nova_reserva[index].duracao_de_estadia);
+	scanf("%d", &atualizar_reserva[index].duracao_de_estadia);
 
 	printf("Documento: \n");
-	scanf(" %[^\n]", nova_reserva[index].documento);
+	scanf(" %[^\n]", atualizar_reserva[index].documento);
 }
