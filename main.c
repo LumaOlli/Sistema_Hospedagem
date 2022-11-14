@@ -100,7 +100,7 @@ int main(void){
                 printf("Por favor, insira a posição da reserva para edição:");
             	int edit_index;
             	scanf("%d", &edit_index);
-				editar_reserva(&atualizar_reserva, edit_index);
+				editar_reserva(atualizar_reserva, edit_index);
                 break;
 
             case OPCAO6:
