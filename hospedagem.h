@@ -7,7 +7,7 @@ typedef struct hospede Hospede;
 typedef struct lista Lista;
 
 //Função que , onde a reserva de cada hosede vai ser armazenado em uma lista encadeada para armazernar seus dados
-Hospede *realizar_reserva();
+Hospede *realizar_reserva(Hospede *nova_reserva);
 //Função que recebe como parametro nova reserva e elemento
 Lista *excluir_reserva(Lista *nova_reserva, int elemento);
 

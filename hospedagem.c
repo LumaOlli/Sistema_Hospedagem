@@ -14,8 +14,7 @@ struct lista{
 	Lista *nova_reserva;
 };
 
-Hospede *realizar_reserva(){
-	Hospede *nova_reserva;
+Hospede *realizar_reserva(Hospede *nova_reserva){
 	int opcao;
 
 	nova_reserva=(Lista*)malloc(sizeof(Lista));
