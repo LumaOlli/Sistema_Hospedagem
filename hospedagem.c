@@ -131,3 +131,24 @@ void consultar_quartos_disponiveis(){
   }
   fclose(arq);
 }
+
+int vazia(Lista *nova_reserva){
+	return nova_reserva == NULL;
+}
+
+void quantitativo_de_hospede(Lista *nova_reserva){
+	int i = 0;
+
+	if(vazia(nova_reserva)){
+		printf("A lista está vazia!!\n");
+	}
+	else{
+		while(nova_reserva != NULL){
+			printf("%i", nova_reserva->info);
+			nova_reserva = nova_reserva->info;
+			i++;
+		}
+	}
+
+	printf("Ha %i hospedes no Hotel!\n", i);
+}
