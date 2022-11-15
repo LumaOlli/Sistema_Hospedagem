@@ -105,3 +105,50 @@ void editar_reserva(Hospede *atualizar_reserva, int index){
 	printf("Documento: \n");
 	scanf(" %[^\n]", atualizar_reserva[index].documento);
 }
+
+void consultar_quartos_disponiveis(){
+  FILE *arq;
+  char Linha[100];
+  char *resultado;
+  int i;
+
+  arq=fopen("Quarto.txt", "rt"); /*Abre o arquivo TEXTO para leitura*/
+  if(arq == NULL){  /*Caso tenha erro na abertura do arquivo*/
+    printf("Erro na abertura do arquivo");
+    return;
+  }
+
+  i=1;
+  while(!feof(arq)){/*Lê linha(inclusive com '/n')*/
+  /*<FEOF> retorna um valor dif. de zero se uma operação de
+  leitura tentou ler após o final do arquivo. Caso contrário
+  return 0.*/
+    resultado=fgets(Linha, 100, arq);/*O fgets lê ate 99  caracteres e/ou '/n'*/
+    if(resultado){/*Caso a leitura for bem sucedida*/
+      printf(" %d: %s", i, Linha);
+      i++;
+    }
+  }
+  fclose(arq);
+}
+
+int vazia(Lista *nova_reserva){
+	return nova_reserva == NULL;
+}
+
+void quantitativo_de_hospede(Lista *nova_reserva){
+	int i = 0;
+
+	if(vazia(nova_reserva)){
+		printf("A lista está vazia!!\n");
+	}
+	else{
+		while(nova_reserva != NULL){
+			printf("%i", nova_reserva->info);
+			nova_reserva = nova_reserva->info;
+			i++;
+		}
+	}
+
+	printf("Ha %i hospedes no Hotel!\n", i);
+}
