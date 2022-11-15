@@ -118,7 +118,7 @@ int main(void){
                 break;
         
             default:
-                printf("Estee programa possui um bug!\n");
+                printf("Este programa possui um bug!\n");
                 return 1;   
         }
     }while(!saida);
