@@ -73,7 +73,7 @@ int main(void){
     unsigned int saida = 0;
     Hospede *reserva;
     Lista *lista = cria_ls();
-    int exc_reserva;
+    //int exc_reserva;
 
     do{
         ApresentaMenu (N_OPCOES, OPCAO1,
@@ -87,7 +87,7 @@ int main(void){
         switch(op){
             case OPCAO1:
                 reserva = realizar_reserva();
-                lista = insere(lista, elemento);
+                lista = insere(lista, reserva);
                 break;
 
             case OPCAO2:
