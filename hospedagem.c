@@ -36,6 +36,17 @@ Hospede *realizar_reserva(Hospede *nova_reserva){
 		scanf("%d", &opcao);
 
 	}
+FILE *arquivo_hosp;
+	arquivo_hosp = fopen("ListarReserva.txt", "a"); 
+	
+	if(arquivo_hosp == NULL){
+	    printf("Erro ao abrir arquivo");
+	} else{
+	    printf("Salvo com sucesso!");
+	}
+    fprintf(arquivo_hosp, "Nome: %s\nTempo de reserva:%d\nDocumento: %s\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento););
+    fclose(arquivo_hosp);
+
 	return nova_reserva;
 }	
 
@@ -68,13 +79,26 @@ Lista *excluir_reserva(Lista *nova_reserva, int elemento){
 }
 
 void listar_reserva(){
-
-	FILE *listar_a_reserva = fopen("ListarReserva.txt", "rw");
-
-	if(listar_a_reserva == NULL){
-		printf("Nao foi possivel abrir o arquivo!!\n");
-		exit (1);		
-	}
+  FILE *arquivo_hosp;
+  char Linha[100];
+  char *result;
+  int i;
+  // Abre um arquivo TEXTO para LEITURA
+  arquivo_hosp = fopen("ListarReserva.txt", "rt");
+  if (arq == NULL){  // Se houve erro na abertura
+     printf("Problemas na abertura do arquivo\n");
+     return;
+  }
+  i = 1;
+  while (!feof(arquivo_hosp))
+  {
+	// Lê uma linha (inclusive com o '\n')
+      result = fgets(Linha, 100, arquivo_hosp);  // o 'fgets' lê até 99 caracteres ou até o '\n'
+      if (result)  // Se foi possível ler
+	  printf("%s",i,Linha);
+      i++;
+  }
+  fclose(arquivo_hosp);
 }
 
 Lista *buscar_reserva(int reserva, Lista *nova_reserva){

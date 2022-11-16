@@ -13,7 +13,7 @@ Hospede *realizar_reserva(Hospede *nova_reserva);
 de um determinado hospede seja excluida*/
 Lista *excluir_reserva(Lista *nova_reserva, int elemento);
 
-/*Função que lista/escreve em um arquivo dados dos hospedes*/
+/*Função que listar tem como função imprimir os dados do hospede*/
 void listar_reserva();
 
 /*Função que irá buscar uma reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/

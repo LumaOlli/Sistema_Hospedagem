@@ -21,7 +21,7 @@ void ler_arq(){
   return 0.*/
     resultado=fgets(Linha, 100, arq);/*O fgets lê ate 99  caracteres e/ou '/n'*/
     if(resultado){/*Caso a leitura for bem sucedida*/
-      printf(" %d: %s", i, Linha);
+      printf("%s", i, Linha);
       i++;
     }
   }
