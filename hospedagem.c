@@ -90,8 +90,7 @@ void listar_reserva(){
      return;
   }
   i = 1;
-  while (!feof(arquivo_hosp))
-  {
+  while (!feof(arquivo_hosp)){
 	// Lê uma linha (inclusive com o '\n')
       result = fgets(Linha, 100, arquivo_hosp);  // o 'fgets' lê até 99 caracteres ou até o '\n'
       if (result)  // Se foi possível ler
