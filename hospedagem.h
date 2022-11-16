@@ -7,7 +7,7 @@ typedef struct hospede Hospede;
 typedef struct lista Lista;
 
 /*Função que recebe como parâmetro nova reserva do tipo hospede, onde vai ser armazenado os dados dos hospedes*/
-Hospede *realizar_reserva(Hospede *nova_reserva);
+Hospede *realizar_reserva(void);
 
 /*Função que recebe como parametro nova reserva e elemento, onde vai ser percorrida a lista para que a reserva
 de um determinado hospede seja excluida*/
@@ -16,6 +16,14 @@ Lista *excluir_reserva(Lista *nova_reserva, int elemento);
 /*Função listar para imprimir os dados do hospede*/
 void listar_reserva();
 
+/**/
+Lista * insere(Lista *lista, Hospede *elemento);
+
+/**/
+Lista* cria_ls(); 
+
+/**/
+Lista *excluir_reserva(Lista *nova_reserva, int elemento);
 /*Função que irá buscar uma reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/
 Lista *buscar_reserva(int reserva, Lista *nova_reserva);
 

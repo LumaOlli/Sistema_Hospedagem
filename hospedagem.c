@@ -7,36 +7,29 @@ struct hospede{
 	char nome[100];
 	int duracao_de_estadia;
 	char documento[80];
+	int numero_do_hospede;
 };
 
 struct lista{
-	int info;
-	Lista *nova_reserva;
+	Hospede *info;
+	Lista *prox;
 };
 
-Hospede *realizar_reserva(Hospede *nova_reserva){
-	int opcao;
+Hospede *realizar_reserva(void){
 
-	nova_reserva=(Lista*)malloc(sizeof(Lista));
+	Hospede *nova_reserva;
+	nova_reserva=(Hospede*)malloc(sizeof(Hospede));
 
-	while(opcao == 1){
+	printf("Informe o nome: \n");
+	scanf(" %[^\n]", nova_reserva->nome);
+	printf("Informe a duracao da estadia: \n");
+	scanf("%d", &nova_reserva->duracao_de_estadia);
+	printf("Informe o documento: \n");
+	scanf(" %[^\n]", nova_reserva->documento);
+	printf("Informe o numero do hospede: \n");
+	scanf("%d", &nova_reserva->numero_do_hospede);
 
-		printf("Informe o nome: \n");
-		scanf(" %[^\n]", nova_reserva->nome);
-		system("cls");
-		printf("Informe a duracao da estadia: \n");
-		scanf("%d", &nova_reserva->duracao_de_estadia);
-		system("cls");
-		printf("Informe o documento: \n");
-		scanf(" %[^\n]", nova_reserva->documento);
-		system("cls");
-
-		printf("Deseja continuar marcando nova reserva?\n");
-		printf("    <1-SIM>               <2-NAO>\n");
-		scanf("%d", &opcao);
-
-	}
-FILE *arquivo_hosp;
+	FILE *arquivo_hosp;
 	arquivo_hosp = fopen("ListarReserva.txt", "a"); 
 	
 	if(arquivo_hosp == NULL){
@@ -44,38 +37,49 @@ FILE *arquivo_hosp;
 	} else{
 	    printf("Salvo com sucesso!");
 	}
-    fprintf(arquivo_hosp, "Nome: %s\nTempo de reserva:%d\nDocumento: %s\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento););
+    fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento);
     fclose(arquivo_hosp);
 
 	return nova_reserva;
 }	
 
+Lista *insere(Lista *lista, Hospede *elemento){
+    Lista *nova = (Lista*) malloc(sizeof(Lista));
+    nova->info = elemento;
+    nova->prox = lista;
+    return nova;
+}
+
+Lista* cria_ls(){
+	return NULL;
+}
+/*
 Lista *excluir_reserva(Lista *nova_reserva, int elemento){
 
 	Lista *anterior =NULL;
 	Lista *percorre = nova_reserva;
 
-	while(percorre->nova_reserva = elemento){
+	while(percorre->info->numero_do_hospede != elemento){
 		
 		if(percorre == NULL){
 			anterior = percorre;
-			percorre = percorre->nova_reserva;
+			percorre = percorre->prox;
 			
 			return percorre;
 		}
-		
-		if(anterior == NULL){
-			nova_reserva = percorre->nova_reserva;
-		}
-
-		else{
-			anterior->nova_reserva = percorre->nova_reserva; 
-		}
-
-		free(percorre);
-
-		return printf("A reserva solicitada foi excluida com sucesso!!\n");
+	}	
+	if(anterior == NULL){
+		nova_reserva = percorre->prox;
 	}
+
+	else{
+		anterior->prox = percorre->prox; 
+	}
+
+	free(percorre);
+
+	return nova_reserva;
+	
 }
 
 void listar_reserva(){
@@ -85,7 +89,7 @@ void listar_reserva(){
   int i;
   // Abre um arquivo TEXTO para LEITURA
   arquivo_hosp = fopen("ListarReserva.txt", "rt");
-  if (arq == NULL){  // Se houve erro na abertura
+  if (arquivo_hosp == NULL){  // Se houve erro na abertura
      printf("Problemas na abertura do arquivo\n");
      return;
   }
@@ -135,19 +139,19 @@ void consultar_quartos_disponiveis(){
   char *resultado;
   int i;
 
-  arq=fopen("Quarto.txt", "rt"); /*Abre o arquivo TEXTO para leitura*/
-  if(arq == NULL){  /*Caso tenha erro na abertura do arquivo*/
+  arq=fopen("Quarto.txt", "rt"); //Abre o arquivo TEXTO para leitura
+  if(arq == NULL){  //Caso tenha erro na abertura do arquivo
     printf("Erro na abertura do arquivo");
     return;
   }
 
   i=1;
-  while(!feof(arq)){/*Lê linha(inclusive com '/n')*/
+  while(!feof(arq)){//Lê linha(inclusive com '/n')*/
   /*<FEOF> retorna um valor dif. de zero se uma operação de
   leitura tentou ler após o final do arquivo. Caso contrário
-  return 0.*/
-    resultado=fgets(Linha, 100, arq);/*O fgets lê ate 99  caracteres e/ou '/n'*/
-    if(resultado){/*Caso a leitura for bem sucedida*/
+  return 0.*//*
+    resultado=fgets(Linha, 100, arq);
+    if(resultado){
       printf(" %d: %s", i, Linha);
       i++;
     }
@@ -174,4 +178,4 @@ void quantitativo_de_hospede(Lista *nova_reserva){
 	}
 
 	printf("Ha %i hospedes no Hotel!\n", i);
-}
+}*/

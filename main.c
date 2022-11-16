@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <windows.h>
-#include "hospedagem.h"
+#include "hospedagem.c"
 
 #define TITULO_OPCAO1 "realizar reserva"
 #define TITULO_OPCAO2 "excluir reserva"
@@ -71,6 +71,9 @@ void ApresentaMenu(int nItens, int menorOpcao, ...){
 int main(void){
     unsigned char op;
     unsigned int saida = 0;
+    Hospede *reserva;
+    Lista *lista = cria_ls();
+    int exc_reserva;
 
     do{
         ApresentaMenu (N_OPCOES, OPCAO1,
@@ -83,24 +86,24 @@ int main(void){
 
         switch(op){
             case OPCAO1:
-				realizar_reserva();
+                reserva = realizar_reserva();
+                lista = insere(lista, elemento);
                 break;
 
             case OPCAO2:
+                //printf("Informe o numero de hospede: ");
+                //scanf("%d", &exc_reserva);
+                //lista = excluir_reserva(lista, exc_reserva);
                 break;
 
             case OPCAO3:
-                listar_reserva();
+                //listar_reserva();
                 break;
 
             case OPCAO4:
                 break;
 
             case OPCAO5:
-                printf("Por favor, insira a posição da reserva para edição:");
-            	int edit_index;
-            	scanf("%d", &edit_index);
-				editar_reserva(atualizar_reserva, edit_index);
                 break;
 
             case OPCAO6:
