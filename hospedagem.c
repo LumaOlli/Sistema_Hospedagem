@@ -59,7 +59,7 @@ Lista* excluir_reserva(Lista *lista, int elemento){
 	Lista *percorre = lista;
 	while(percorre->info != NULL){
 		if(percorre == NULL){
-			return percorre;
+			return lista;
 		
 			anterior = percorre;
             percorre =percorre->prox;

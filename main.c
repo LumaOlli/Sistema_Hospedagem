@@ -112,7 +112,7 @@ int main(void){
 
             case OPCAO7:
 
-                break;
+                break; 
 
             case OPCAO8:
 

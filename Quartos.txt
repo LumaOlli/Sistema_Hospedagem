@@ -5,7 +5,7 @@ Localização: Casa Do Pernalonga
 Quarta 02
 Disponibilidade: Não
 Preço: 300.00
-Localização: Ponte Do Broolyn
+Localização: Ponte Do Broollyn
 Quarto 03
 Disponibilidade: Sim
 Preço: 400.00
@@ -13,4 +13,4 @@ Localização: Casa Maluca
 Quarto 04
 Disponibilidade: Não
 Preço: 500.00
-Localização: Central Park
+Localização: Central Perk
