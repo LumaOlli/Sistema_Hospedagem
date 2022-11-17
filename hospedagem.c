@@ -37,7 +37,7 @@ Hospede *realizar_reserva(void){
 	} else{
 	    printf("Salvo com sucesso!");
 	}
-    fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento);
+    fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\nNumero do hospede:%d\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento, nova_reserva->numero_do_hospede);
     fclose(arquivo_hosp);
 
 	return nova_reserva;
@@ -54,7 +54,7 @@ Lista* cria_ls(){
 	return NULL;
 }
 
-Lista *excluir_reserva(Lista *lista, Hospede elemento){
+Lista* excluir_reserva(Lista *lista, int elemento){
 	Lista *anterior= NULL;
 	Lista *percorre = lista;
 	while(percorre->info->numero_do_hospede != NULL){
