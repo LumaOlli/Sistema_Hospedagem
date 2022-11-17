@@ -73,7 +73,7 @@ int main(void){
     unsigned int saida = 0;
     Hospede *reserva;
     Lista *lista = cria_ls();
-    //int exc_reserva;
+    int exc_reserva;
 
     do{
         ApresentaMenu (N_OPCOES, OPCAO1,
@@ -91,9 +91,9 @@ int main(void){
                 break;
 
             case OPCAO2:
-                //printf("Informe o numero de hospede: ");
-                //scanf("%d", &exc_reserva);
-                //lista = excluir_reserva(lista, exc_reserva);
+                printf("Informe o numero de hospede: ");
+                scanf("%d", &exc_reserva);
+                lista = excluir_reserva(lista, exc_reserva);
                 break;
 
             case OPCAO3:
