@@ -23,7 +23,7 @@ Lista * insere(Lista *lista, Hospede *elemento);
 Lista* cria_ls(); 
 
 /**/
-Lista *excluir_reserva(Lista *nova_reserva, Hospede elemento);
+Lista *excluir_reserva(Lista *lista, Hospede elemento);
 /*Função que irá buscar uma reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/
 Lista *buscar_reserva(int reserva, Lista *nova_reserva);
 

@@ -54,9 +54,9 @@ Lista* cria_ls(){
 	return NULL;
 }
 
-Lista *excluir_reserva(Lista *nova_reserva, Hospede elemento){
+Lista *excluir_reserva(Lista *lista, Hospede elemento){
 	Lista *anterior= NULL;
-	Lista *percorre = nova_reserva;
+	Lista *percorre = lista;
 	while(percorre->info->numero_do_hospede != NULL){
 		if(percorre == NULL){
 			anterior = percorre;
@@ -66,12 +66,11 @@ Lista *excluir_reserva(Lista *nova_reserva, Hospede elemento){
 		}
 	}
 	if(anterior == NULL){
-		nova_reserva=percorre->prox;
+		lista=percorre->prox;
 	}
 	else{
 		anterior->prox=percorre->prox;
 	}
 	free(percorre);
-
-	return nova_reserva;	
+	return lista;	
 }
