@@ -1,9 +1,1 @@
 
-Nome: alencar
-Tempo de reserva:4
-Documento: 0214578
-Numero do hospede:1
-Nome: Gomes
-Tempo de reserva:6
-Documento: 213548796
-Numero do hospede:2

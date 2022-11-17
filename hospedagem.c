@@ -75,7 +75,7 @@ Lista* excluir_reserva(Lista *lista, int numero_informado){
 	return lista;	
 }
 
-void lst_imprime(Lista* lista){
+void Listar_reserva(Lista* lista){
 
 	Lista*percorre;
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){

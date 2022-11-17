@@ -74,6 +74,7 @@ int main(void){
     Hospede *reserva;
     Lista *lista = cria_ls();
     int exc_reserva;
+    int buscar_reserva;
 
     do{
         ApresentaMenu (N_OPCOES, OPCAO1,
@@ -88,23 +89,23 @@ int main(void){
             case OPCAO1:
                 reserva = realizar_reserva();
                 lista = insere(lista, reserva);
-                system("cls");
                 break;
 
             case OPCAO2:
                 printf("Informe o numero de hospede: ");
                 scanf("%d", &exc_reserva);
                 lista = excluir_reserva(lista, exc_reserva);
-                lst_imprime(lista);
                 printf("Excluido com Sucesso!\n");
-
                 break;
 
             case OPCAO3:
-                //listar_reserva();
+                Listar_reserva(lista);
                 break;
 
             case OPCAO4:
+                printf("Informe o numero de hospede:");
+                scanf("%d", &buscar_reserva);
+                lista = Buscar_reserva(buscar_reserva, lista);
                 break;
 
             case OPCAO5:
