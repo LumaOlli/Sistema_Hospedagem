@@ -57,12 +57,12 @@ Lista* cria_ls(){
 Lista* excluir_reserva(Lista *lista, int elemento){
 	Lista *anterior= NULL;
 	Lista *percorre = lista;
-	while(percorre->info->numero_do_hospede != NULL){
+	while(percorre->info != NULL){
 		if(percorre == NULL){
+			return percorre;
+		
 			anterior = percorre;
             percorre =percorre->prox;
-
-			return percorre;
 		}
 	}
 	if(anterior == NULL){
