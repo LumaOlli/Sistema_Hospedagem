@@ -88,12 +88,16 @@ int main(void){
             case OPCAO1:
                 reserva = realizar_reserva();
                 lista = insere(lista, reserva);
+                system("cls");
                 break;
 
             case OPCAO2:
                 printf("Informe o numero de hospede: ");
                 scanf("%d", &exc_reserva);
-                excluir_reserva(lista, exc_reserva);
+                lista = excluir_reserva(lista, exc_reserva);
+                lst_imprime(lista);
+                printf("Excluido com Sucesso!\n");
+
                 break;
 
             case OPCAO3:

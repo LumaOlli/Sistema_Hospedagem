@@ -25,6 +25,9 @@ Lista* cria_ls();
 /**/
 Lista* excluir_reserva(Lista *lista, int elemento);
 
+/**/
+void lst_imprime(Lista* lista);
+
 /*Função que irá buscar uma reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/
 Lista *buscar_reserva(int reserva, Lista *nova_reserva);
 

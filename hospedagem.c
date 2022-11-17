@@ -54,18 +54,18 @@ Lista* cria_ls(){
 	return NULL;
 }
 
-Lista* excluir_reserva(Lista *lista, int elemento){
+Lista* excluir_reserva(Lista *lista, int numero_informado){
 	Lista *anterior= NULL;
 	Lista *percorre = lista;
-	while(percorre->info != NULL){
+	while(percorre->info->numero_do_hospede != numero_informado){
 		if(percorre == NULL){
 			return lista;
-		
-			anterior = percorre;
-            percorre =percorre->prox;
 		}
+		anterior = percorre;
+        percorre =percorre->prox;
 	}
-	if(anterior == NULL){
+	/*Fazendo exclução*/
+	if(anterior == NULL){//caso seja no inicio do elemento
 		lista=percorre->prox;
 	}
 	else{
@@ -73,4 +73,15 @@ Lista* excluir_reserva(Lista *lista, int elemento){
 	}
 	free(percorre);
 	return lista;	
+}
+
+void lst_imprime(Lista* lista){
+
+	Lista*percorre;
+	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
+		printf("Nome = %s \n", percorre->info->nome);
+		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
+		printf("Documento = %s \n", percorre->info->documento);
+	}
+
 }
