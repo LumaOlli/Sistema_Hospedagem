@@ -107,7 +107,6 @@ int main(void){
                 printf("Informe o numero de hospede:");
                 scanf("%d", &buscar_reserva);
                 Buscar_reserva(buscar_reserva, lista);
-            
                 break;
 
             case OPCAO5:
