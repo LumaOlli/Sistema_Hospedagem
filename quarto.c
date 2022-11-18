@@ -18,9 +18,9 @@ void ler_arq(){
 
   i=1;
   while(!feof(arq)){/*Lê linha(inclusive com '/n')*/
-  /*<FEOF> retorna um valor dif. de zero se uma operação de
-  leitura tentou ler após o final do arquivo. Caso contrário
-  return 0.*/
+    /*<FEOF> retorna um valor dif. de zero se uma operação de
+    leitura tentou ler após o final do arquivo. Caso contrário
+    return 0.*/
     resultado=fgets(Linha, 100, arq);/*O fgets lê ate 99  caracteres e/ou '/n'*/
     if(resultado){/*Caso a leitura for bem sucedida*/
       printf("%s", i, Linha);
