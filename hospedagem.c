@@ -91,43 +91,26 @@ void Buscar_reserva(int numero_informado, Lista* lista){
 
 	for(percorre=lista; percorre !=NULL; percorre=percorre->prox){
 		if(percorre->info->numero_do_hospede == numero_informado){
-		printf("Nome = %s \n", percorre->info->nome);
-		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
-		printf("Documento = %s \n", percorre->info->documento);
+		printf("Nome = %s\n", percorre->info->nome);
+		printf("Tempo de duracao = %d\n", percorre->info->duracao_de_estadia);
+		printf("Documento = %s\n", percorre->info->documento);
 		}
 	}
 
 }
 
-Lista *Editar_reserva(Lista *lista){
+void Editar_reserva(Lista *lista, int numero_informado){
 	Lista *percorre;
-	Lista *novo = (Lista *)malloc(sizeof(Lista));
-
-	int id;
-	char reservastruct[100];
-	int resultado = 1 ;
-
-	printf("Indorme o numero do hospede:");
-	scanf("%d", &id);
-
-	for(percorre=lista; percorre != NULL; percorre=percorre->prox){
-		strcpy(reservastruct, percorre->info->numero_do_hospede);
-		resultado = strcmp(id, reservastruct);
-
-		if(resultado==0){
-			printf("Informe o nome:");
+	
+	for(percorre = lista ;percorre != NULL;percorre = percorre->prox){
+		if(percorre->info->numero_do_hospede == numero_informado){
+			printf("Informe o novo nome:\n");
 			scanf(" %[^\n]", percorre->info->nome);
-
-			printf("Informe o tempo de duração:");
+			printf("Novo tempo de duracao: \n");
 			scanf("%d", &percorre->info->duracao_de_estadia);
-
-			printf("Informe o documento:");
+			printf("Novo documento:\n");
 			scanf(" %[^\n]", percorre->info->documento);
 		}
 	}
 
-	if(resultado == 1){
-		printf("Hospede inesistente\n");
-	}
-	return lista;
 }

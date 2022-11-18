@@ -75,6 +75,7 @@ int main(void){
     Lista *lista = cria_ls();
     int exc_reserva;
     int buscar_reserva;
+    int edit_reserva;
 
     do{
         printf("\n");
@@ -110,7 +111,9 @@ int main(void){
                 break;
 
             case OPCAO5:
-                lista = Editar_reserva(lista);
+                printf("Informe o numero de hospede:");
+                scanf("%d", &edit_reserva);
+                Editar_reserva(lista, edit_reserva);
                 break;
 
             case OPCAO6:

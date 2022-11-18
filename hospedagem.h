@@ -32,7 +32,7 @@ void Listar_reserva(Lista* lista);
 void Buscar_reserva(int numero_informado, Lista *lista);
 
 /*Função encarregada de editar/atualizar um reserva do hotel*/
-Lista *Editar_reserva(Lista *lista);
+void Editar_reserva(Lista *lista, int numero_informado);
 
 /*Função que irá olhar quantos quartos estão disponíveis no hotel*/
 void consultar_quartos_disponiveis();
