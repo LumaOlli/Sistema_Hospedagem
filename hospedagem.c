@@ -85,3 +85,16 @@ void Listar_reserva(Lista* lista){
 	}
 
 }
+
+void Buscar_reserva(int numero_informado, Lista* lista){
+	Lista * percorre;
+
+	for(percorre=lista; percorre !=NULL; percorre=percorre->prox){
+		if(percorre->info->numero_do_hospede == numero_informado){
+		printf("Nome = %s \n", percorre->info->nome);
+		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
+		printf("Documento = %s \n", percorre->info->documento);
+		}
+	}
+
+}

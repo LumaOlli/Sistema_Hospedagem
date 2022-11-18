@@ -77,6 +77,7 @@ int main(void){
     int buscar_reserva;
 
     do{
+        printf("\n");
         ApresentaMenu (N_OPCOES, OPCAO1,
                         TITULO_OPCAO1, TITULO_OPCAO2,
                         TITULO_OPCAO3, TITULO_OPCAO4,
@@ -105,7 +106,8 @@ int main(void){
             case OPCAO4:
                 printf("Informe o numero de hospede:");
                 scanf("%d", &buscar_reserva);
-                lista = Buscar_reserva(buscar_reserva, lista);
+                Buscar_reserva(buscar_reserva, lista);
+            
                 break;
 
             case OPCAO5:

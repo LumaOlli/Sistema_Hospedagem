@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "quarto.h"
 
+struct 
+
 void ler_arq(){
   FILE *arq;
   char Linha[100];

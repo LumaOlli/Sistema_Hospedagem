@@ -29,7 +29,7 @@ Lista* excluir_reserva(Lista *lista, int elemento);
 void Listar_reserva(Lista* lista);
 
 /*Função que irá buscar uma reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/
-Lista *Buscar_reserva(int numero_informado, Lista *lista);
+void Buscar_reserva(int numero_informado, Lista *lista);
 
 /*Função encarregada de editar/atualizar um reserva do hotel*/
 void editar_reserva(Hospede *atualizar_reserva, int index);
