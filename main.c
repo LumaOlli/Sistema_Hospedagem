@@ -110,6 +110,7 @@ int main(void){
                 break;
 
             case OPCAO5:
+                lista = Editar_reserva(lista);
                 break;
 
             case OPCAO6:
