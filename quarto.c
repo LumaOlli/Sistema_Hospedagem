@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "quarto.h"
 
-struct 
+struct quarto{
+  
+}
 
 void ler_arq(){
   FILE *arq;
