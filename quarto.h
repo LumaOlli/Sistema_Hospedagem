@@ -2,4 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void ler_arq();
+typedef struct quarto Quarto;
+
+typedef struct list List;
