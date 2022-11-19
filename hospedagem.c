@@ -114,3 +114,7 @@ void Editar_reserva(Lista *lista, int numero_informado){
 	}
 
 }
+
+void quartos_disponiveis(Lista *lista){
+	
+}

@@ -35,10 +35,10 @@ void Buscar_reserva(int numero_informado, Lista *lista);
 void Editar_reserva(Lista *lista, int numero_informado);
 
 /*Função que irá olhar quantos quartos estão disponíveis no hotel*/
-void consultar_quartos_disponiveis();
+void Quartos_disponiveis();
 
 /*Função que irá verificar se a lista esta vazia e irá retornar a mesma*/
-int vazia(Lista *nova_reserva);
+int Vazia(Lista *nova_reserva);
 
 /*Função responsável por verificar e mostra a quantidade de hospedes na lista*/
-void quantitativo_de_hospede(Lista *nova_reserva);
+void Quantitativo_de_Hospede(Lista *nova_reserva);

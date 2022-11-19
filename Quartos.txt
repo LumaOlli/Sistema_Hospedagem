@@ -6,8 +6,8 @@ Quarta 02
 Disponibilidade: Não
 Preço: 300.00
 Localização: Ponte Do Broollyn
-Quarto 03
 Disponibilidade: Sim
+Quarto 03
 Preço: 400.00
 Localização: Casa Maluca
 Quarto 04

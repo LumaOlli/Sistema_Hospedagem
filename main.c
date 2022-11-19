@@ -117,7 +117,7 @@ int main(void){
                 break;
 
             case OPCAO6:
-
+                quartos_disponiveis(lista);
                 break;
 
             case OPCAO7:
