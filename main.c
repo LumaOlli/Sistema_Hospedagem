@@ -125,7 +125,6 @@ int main(void){
                 break; 
 
             case OPCAO8:
-
                 saida = 1;
                 printf("Obrigado por usar este programa\n");
                 break;
