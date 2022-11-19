@@ -3,6 +3,7 @@
 #include <string.h>
 #include "quarto.h"
 
+<<<<<<< HEAD
 struct quarto{
   
 }
@@ -32,3 +33,5 @@ void ler_arq(){
   }
   fclose(arq);
 }
+=======
+>>>>>>> 0a7344c04ac4f99435a68246ca5cc5d89f6ebc23
