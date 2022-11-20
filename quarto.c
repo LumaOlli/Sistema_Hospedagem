@@ -45,3 +45,10 @@ Quarto *reservar_quarto(void){
 
   return cadastrar_quarto;
 }
+
+List *inserir(List *lista, Quarto *novo_quarto){
+
+  List *novo = (List*) malloc (sizeof(List));
+  novo->dados = novo_quarto;
+  novo->next = Lista;
+}
