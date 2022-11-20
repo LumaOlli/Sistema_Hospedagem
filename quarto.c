@@ -23,10 +23,11 @@ Quarto *reservar_quarto(void){
 
   printf("Informe o numero do quarto: ");
   scanf("%d", &cadastrar_quarto->numero_quarto);
-  printf("Informe a disponibilidade: ");
+  printf("Informe a disponibilidade: \n");
+  printf("  <1> Sim    <2> Não   ");
   scanf("%d", &cadastrar_quarto->disponibilidade);
   printf("Informe a localizacao: ");
-  scanf("%[^\n]", &cadastrar_quarto->localizacao);
+  scanf(" %[^\n]", cadastrar_quarto->localizacao);
   printf("Informe o valor do quarto: ");
   scanf("%f", &cadastrar_quarto->preco);
 
@@ -39,18 +40,17 @@ Quarto *reservar_quarto(void){
     printf("SALVO COM SUCESSO!\n");
   }
 
-  fprintf(info_quartos, "Numero do quarto:%d\nDisponibilidade:%d\nLocalizacao:%s\nPreco:%f\n", cadastrar_quarto->numero_quarto, cadastrar_quarto->disponibilidade, cadastrar_quarto->localizacao, cadastrar_quarto->preco);
+  fprintf(info_quartos, "Numero do quarto:%d\nDisponibilidade:%d\nLocalizacao:%s\nPreco:%.2f\n", cadastrar_quarto->numero_quarto, cadastrar_quarto->disponibilidade, cadastrar_quarto->localizacao, cadastrar_quarto->preco);
 
   fclose(info_quartos);
-
   return cadastrar_quarto;
 }
 
-List *inserir(List *lista, Quarto *novo_quarto){
+List *inserir_quarto(List *lista, Quarto *novo_quarto){
 
   List *novo = (List*) malloc (sizeof(List));
   novo->dados = novo_quarto;
-  novo->next = Lista;
+  novo->next = lista;
 
   return novo;
 }
@@ -59,3 +59,14 @@ List *cria(){
   return NULL;
 }
 
+void Quartos_disponiveis(List *lista, int numero){
+	List *percorre;
+
+	for(percorre=lista; percorre != NULL; percorre=percorre->next){
+		if(percorre->dados->disponibilidade == numero){
+			printf("Numero: %d\n", percorre->dados->numero_quarto);
+			printf("Preço: %.2f\n", percorre->dados->preco);
+			printf("Localização: %s\n", percorre->dados->localizacao);
+		}
+	}
+}

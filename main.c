@@ -77,6 +77,7 @@ int main(void){
     int exc_reserva;
     int buscar_reserva;
     int edit_reserva;
+    int dispo_quarto;
     Quarto *cadastra;
 
     do{
@@ -93,8 +94,9 @@ int main(void){
             case OPCAO1:
                 Beep(1000,500);
                 reserva = realizar_reserva();
-                lista = insere(lista, reserva);
+                lista = insere_hospede(lista, reserva);
                 cadastra = reservar_quarto();
+                lista = inserir_quarto(lista, cadastra);
                 break;
 
             case OPCAO2:
@@ -122,7 +124,14 @@ int main(void){
                 break;
 
             case OPCAO6:
-                quartos_disponiveis(lista);
+                printf("Informe <1> para disponibilidade dos quartos:");
+                scanf("%d", &dispo_quarto);
+                if(1){
+                    Quartos_disponiveis(lista, dispo_quarto);
+                }
+                else{
+                    printf("Hiii, não quervermos ver os quartosdisponiveis\n");
+                }
                 break;
 
             case OPCAO7:

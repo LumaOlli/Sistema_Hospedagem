@@ -43,7 +43,7 @@ Hospede *realizar_reserva(void){
 	return nova_reserva;
 }	
 
-Lista *insere(Lista *lista, Hospede *elemento){
+Lista *insere_hospede(Lista *lista, Hospede *elemento){
     Lista *nova = (Lista*) malloc(sizeof(Lista));
     nova->info = elemento;
     nova->prox = lista;
@@ -112,9 +112,5 @@ void Editar_reserva(Lista *lista, int numero_informado){
 			scanf(" %[^\n]", percorre->info->documento);
 		}
 	}
-
-}
-
-void quartos_disponiveis(Lista *lista){
 
 }
