@@ -54,3 +54,7 @@ List *inserir(List *lista, Quarto *novo_quarto){
 
   return novo;
 }
+
+List *cria(){
+  return NULL;
+}
