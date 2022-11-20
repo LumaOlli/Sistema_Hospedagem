@@ -86,8 +86,8 @@ void Listar_reservaQ(List* list){
 
 	for(p=list; p!=NULL; p=p->next){
 		printf("Numero do quarto = %d \n", p->dados->numero_quarto);
+    printf("Disponibilidade = %d \n", p->dados->disponibilidade);
 		printf("Localizacao = %s \n", p->dados->localizacao);
-		printf("Disponibilidade = %d \n", p->dados->disponibilidade);
     printf("Preco = %.2f \n", p->dados->preco);
 	}
 
