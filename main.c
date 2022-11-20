@@ -102,6 +102,7 @@ int main(void){
                 scanf("%d", &exc_reserva);
                 lista = excluir_reserva(lista, exc_reserva);
                 printf("Excluido com Sucesso!\n");
+                Beep(1000,500);
                 break;
 
             case OPCAO3:
