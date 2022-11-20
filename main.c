@@ -77,8 +77,8 @@ int main(void){
     List *list = cria_ls();
     int exc_hospede, exc_quarto;
     int buscar_hospede, buscar_quarto;
-    int edit_reserva;
-    int dispo_quarto;
+    int edit_hospede, edit_quarto;
+    //int dispo_quarto;
     Quarto *cadastra;
 
     do{
@@ -127,8 +127,11 @@ int main(void){
 
             case OPCAO5:
                 printf("Informe o numero de hospede:");
-                scanf("%d", &edit_reserva);
-                Editar_reservaH(lista, edit_reserva);
+                scanf("%d", &edit_hospede);
+                Editar_reservaH(lista, edit_hospede);
+                printf("Informe o numero do quarto:");
+                scanf("%d", &edit_quarto);
+                Editar_reservaQ(list, edit_quarto);
                 break;
 
             case OPCAO6:

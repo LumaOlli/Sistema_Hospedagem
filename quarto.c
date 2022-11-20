@@ -107,6 +107,24 @@ void Buscar_reservaQ(int numero_identificao, List* list){
 
 }
 
+void Editar_reservaQ(List *list, int numero_identificacao){
+	List *p;
+	
+	for(p = list; p != NULL; p = p->next){
+		if(p->dados->numero_quarto == numero_identificacao){
+			printf("Numero do quarto:\n");
+      scanf("%d", &p->dados->numero_quarto);
+      printf("Disponibilidade: \n");
+      scanf("%d", &p->dados->disponibilidade);
+      printf("Localizacao: \n");
+      scanf(" %[^\n]", p->dados->localizacao);
+      printf("Preco: \n");
+      scanf("%f", &p->dados->preco);
+		}
+	}
+
+}
+
 /*void Quartos_disponiveis(List *list, int numero){
 	List *percorre;
 

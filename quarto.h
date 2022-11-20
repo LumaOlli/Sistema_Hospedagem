@@ -28,3 +28,6 @@ void Listar_reservaQ(List* list);
 void Buscar_reservaQ(int numero_identificao, List* list);
 
 /**/
+void Editar_reservaQ(List *list, int numero_identificacao);
+
+/**/

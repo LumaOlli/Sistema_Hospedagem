@@ -1,0 +1,4 @@
+Numero do quarto:124
+Disponibilidade:1
+Localizacao:caixa preta
+Preco:82.00
