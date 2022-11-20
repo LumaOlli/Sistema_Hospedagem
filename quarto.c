@@ -52,5 +52,5 @@ List *inserir(List *lista, Quarto *novo_quarto){
   novo->dados = novo_quarto;
   novo->next = Lista;
 
-  
+  return novo;
 }
