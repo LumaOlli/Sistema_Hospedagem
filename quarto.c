@@ -46,11 +46,11 @@ Quarto *reservar_quarto(void){
   return cadastrar_quarto;
 }
 
-List *inserir_quarto(List *lista, Quarto *novo_quarto){
+List *inserir_quarto(List *list, Quarto *novo_quarto){
 
   List *novo = (List*) malloc (sizeof(List));
   novo->dados = novo_quarto;
-  novo->next = lista;
+  novo->next = list;
 
   return novo;
 }
@@ -59,14 +59,35 @@ List *cria_ls(){
   return NULL;
 }
 
-void Quartos_disponiveis(List *lista, int numero){
+List *excluir_reservaQ(List *list, int numero_identificacao){
+	List *ant= NULL;
+	List *p= list;
+	while(p->dados->numero_quarto != numero_identificacao){
+		if(p == NULL){
+			return list;
+		}
+		ant=p;
+    p=p->next;
+	}
+	/*Fazendo exclução*/
+	if(ant == NULL){//caso seja no inicio do elemento
+		list=p->next;
+	}
+	else{
+		ant->next=p->next;
+	}
+	free(p);
+	return list;	
+}
+
+/*void Quartos_disponiveis(List *list, int numero){
 	List *percorre;
 
 	for(percorre=lista; percorre != NULL; percorre=percorre->next){
 		if(percorre->dados->disponibilidade == numero){
 			printf("Numero: %d\n", percorre->dados->numero_quarto);
-			printf("Preco: %.2f\n", percorre->dados->preco);
-			printf("Localizacao: %s\n", percorre->dados->localizacao);
+			printf("Preco: %.2f\n", percorre->dados->preco);			
+      printf("Localizacao: %s\n", percorre->dados->localizacao);
 		}
 	}
-}
+}*/

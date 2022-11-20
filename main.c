@@ -74,8 +74,8 @@ int main(void){
     unsigned int saida = 0;
     Hospede *reserva;
     Lista *lista = cria_ls_hosp();
-    List *lista = cria_ls();
-    int exc_reserva;
+    List *list = cria_ls();
+    int exc_hospede, exc_quarto;
     int buscar_reserva;
     int edit_reserva;
     int dispo_quarto;
@@ -97,13 +97,16 @@ int main(void){
                 reserva = realizar_reserva();
                 lista = insere_hospede(lista, reserva);
                 cadastra = reservar_quarto();
-                lista = inserir_quarto(lista, cadastra);
+                list = inserir_quarto(list, cadastra);
                 break;
 
             case OPCAO2:
                 printf("Informe o numero de hospede: ");
-                scanf("%d", &exc_reserva);
-                lista = excluir_reserva(lista, exc_reserva);
+                scanf("%d", &exc_hospede);
+                lista = excluir_reserva(lista, exc_hospede);
+                printf("Informe o numero de hospede: ");
+                scanf("%d", &exc_quarto);
+                list = excluir_reservaQ(list, exc_quarto);
                 printf("Excluido com Sucesso!\n");
                 Beep(1000,500);
                 break;
@@ -125,14 +128,9 @@ int main(void){
                 break;
 
             case OPCAO6:
-                printf("Informe <1> para disponibilidade dos quartos:");
+                /*printf("Informe <1> para disponibilidade dos quartos:");
                 scanf("%d", &dispo_quarto);
-                if(1){
-                    Quartos_disponiveis(lista, dispo_quarto);
-                }
-                else{
-                    printf("Hiii, não quervermos ver os quartosdisponiveis\n");
-                }
+                Quartos_disponiveis(list, dispo_quarto);*/
                 break;
 
             case OPCAO7:

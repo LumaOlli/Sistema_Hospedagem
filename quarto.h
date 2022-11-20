@@ -10,12 +10,15 @@ typedef struct list List;
 Quarto *reservar_quarto(void);
 
 /**/
-List *inserir_quarto(List *lista, Quarto *novo_quarto);
+List *inserir_quarto(List *list, Quarto *novo_quarto);
 
 /**/
 List *cria_ls();
 
 /*Função que irá olhar quantos quartos estão disponíveis no hotel*/
-void Quartos_disponiveis(List *lista, int numero);
+void Quartos_disponiveis(List *list, int numero);
+
+/**/
+List *excluir_reservaQ(List *list, int numero_identificacao);
 
 /**/

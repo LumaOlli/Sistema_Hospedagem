@@ -1,8 +1,17 @@
-Numero do quarto:213
+
+Numero do quarto:211
 Disponibilidade:1
-Localizacao:av. independencia
+Localizacao:caixa preta
 Preco:250.00
-Numero do quarto:214
+Numero do quarto:212
 Disponibilidade:2
-Localizacao:av. principal
-Preco:254.89
+Localizacao:branco
+Preco:140.00
+Numero do quarto:210
+Disponibilidade:1
+Localizacao:fuifiu
+Preco:60.00
+Numero do quarto:12
+Disponibilidade:1
+Localizacao:lala
+Preco:85.78
