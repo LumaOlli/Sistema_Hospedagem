@@ -58,3 +58,4 @@ List *inserir(List *lista, Quarto *novo_quarto){
 List *cria(){
   return NULL;
 }
+
