@@ -119,7 +119,7 @@ int main(void){
             case OPCAO4:
                 printf("Informe o numero de hospede:");
                 scanf("%d", &buscar_hospede);
-                Buscar_reservaH(buscar_reserva, lista);
+                Buscar_reservaH(buscar_hospede, lista);
                 printf("Informe o numero do quarto:");
                 scanf("%d", &buscar_quarto);
                 Buscar_reservaQ(buscar_quarto, list);
