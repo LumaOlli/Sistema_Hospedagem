@@ -24,7 +24,7 @@ Quarto *reservar_quarto(void){
   printf("Informe o numero do quarto: ");
   scanf("%d", &cadastrar_quarto->numero_quarto);
   printf("Informe a disponibilidade: \n");
-  printf("  <1> Sim    <2> Não   ");
+  printf("  <1> Sim    <2> Nao   ");
   scanf("%d", &cadastrar_quarto->disponibilidade);
   printf("Informe a localizacao: ");
   scanf(" %[^\n]", cadastrar_quarto->localizacao);
@@ -89,6 +89,20 @@ void Listar_reservaQ(List* list){
     printf("Disponibilidade = %d \n", p->dados->disponibilidade);
 		printf("Localizacao = %s \n", p->dados->localizacao);
     printf("Preco = %.2f \n", p->dados->preco);
+	}
+
+}
+
+void Buscar_reservaQ(int numero_identificao, List* list){
+	List *p;
+
+	for(p =list; p !=NULL; p =p->next){
+		if(p->dados->numero_quarto == numero_identificao){
+		printf("Numero do quarto = %d \n", p->dados->numero_quarto);
+    printf("Disponibilidade = %d \n", p->dados->disponibilidade);
+		printf("Localizacao = %s \n", p->dados->localizacao);
+    printf("Preco = %.2f \n", p->dados->preco);
+		}
 	}
 
 }

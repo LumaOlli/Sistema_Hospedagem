@@ -76,7 +76,7 @@ int main(void){
     Lista *lista = cria_ls_hosp();
     List *list = cria_ls();
     int exc_hospede, exc_quarto;
-    int buscar_reserva;
+    int buscar_hospede, buscar_quarto;
     int edit_reserva;
     int dispo_quarto;
     Quarto *cadastra;
@@ -94,7 +94,7 @@ int main(void){
         switch(op){
             case OPCAO1:
                 Beep(1000,500);
-                reserva = realizar_reserva();
+                reserva = realizar_reservaH();
                 lista = insere_hospede(lista, reserva);
                 cadastra = reservar_quarto();
                 list = inserir_quarto(list, cadastra);
@@ -103,7 +103,7 @@ int main(void){
             case OPCAO2:
                 printf("Informe o numero de hospede: ");
                 scanf("%d", &exc_hospede);
-                lista = excluir_reserva(lista, exc_hospede);
+                lista = excluir_reservaH(lista, exc_hospede);
                 printf("Informe o numero do quarto: ");
                 scanf("%d", &exc_quarto);
                 list = excluir_reservaQ(list, exc_quarto);
@@ -112,20 +112,23 @@ int main(void){
                 break;
 
             case OPCAO3:
-                Listar_reserva(lista);
+                Listar_reservaH(lista);
                 Listar_reservaQ(list);
                 break;
 
             case OPCAO4:
                 printf("Informe o numero de hospede:");
-                scanf("%d", &buscar_reserva);
-                Buscar_reserva(buscar_reserva, lista);
+                scanf("%d", &buscar_hospede);
+                Buscar_reservaH(buscar_reserva, lista);
+                printf("Informe o numero do quarto:");
+                scanf("%d", &buscar_quarto);
+                Buscar_reservaQ(buscar_quarto, list);
                 break;
 
             case OPCAO5:
                 printf("Informe o numero de hospede:");
                 scanf("%d", &edit_reserva);
-                Editar_reserva(lista, edit_reserva);
+                Editar_reservaH(lista, edit_reserva);
                 break;
 
             case OPCAO6:

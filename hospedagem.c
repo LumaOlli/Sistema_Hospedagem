@@ -15,7 +15,7 @@ struct lista{
 	Lista *prox;
 };
 
-Hospede *realizar_reserva(void){
+Hospede *realizar_reservaH(void){
 
 	Hospede *nova_reserva;
 	nova_reserva=(Hospede*)malloc(sizeof(Hospede));
@@ -54,7 +54,7 @@ Lista* cria_ls_hosp(){
 	return NULL;
 }
 
-Lista* excluir_reserva(Lista *lista, int numero_informado){
+Lista* excluir_reservaH(Lista *lista, int numero_informado){
 	Lista *anterior= NULL;
 	Lista *percorre = lista;
 	while(percorre->info->numero_do_hospede != numero_informado){
@@ -75,7 +75,7 @@ Lista* excluir_reserva(Lista *lista, int numero_informado){
 	return lista;	
 }
 
-void Listar_reserva(Lista* lista){
+void Listar_reservaH(Lista* lista){
 
 	Lista*percorre;
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
@@ -86,7 +86,7 @@ void Listar_reserva(Lista* lista){
 
 }
 
-void Buscar_reserva(int numero_informado, Lista* lista){
+void Buscar_reservaH(int numero_informado, Lista* lista){
 	Lista * percorre;
 
 	for(percorre=lista; percorre !=NULL; percorre=percorre->prox){
@@ -99,7 +99,7 @@ void Buscar_reserva(int numero_informado, Lista* lista){
 
 }
 
-void Editar_reserva(Lista *lista, int numero_informado){
+void Editar_reservaH(Lista *lista, int numero_informado){
 	Lista *percorre;
 	
 	for(percorre = lista ;percorre != NULL;percorre = percorre->prox){

@@ -25,4 +25,6 @@ List *excluir_reservaQ(List *list, int numero_identificacao);
 void Listar_reservaQ(List* list);
 
 /**/
+void Buscar_reservaQ(int numero_identificao, List* list);
 
+/**/
