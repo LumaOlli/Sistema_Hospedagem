@@ -73,7 +73,8 @@ int main(void){
     unsigned char op;
     unsigned int saida = 0;
     Hospede *reserva;
-    Lista *lista = cria_ls();
+    Lista *lista = cria_ls_hosp();
+    List *lista = cria_ls();
     int exc_reserva;
     int buscar_reserva;
     int edit_reserva;

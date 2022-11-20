@@ -50,7 +50,7 @@ Lista *insere_hospede(Lista *lista, Hospede *elemento){
     return nova;
 }
 
-Lista* cria_ls(){
+Lista* cria_ls_hosp(){
 	return NULL;
 }
 

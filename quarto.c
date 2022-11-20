@@ -37,7 +37,7 @@ Quarto *reservar_quarto(void){
     printf("ERRO AO ABRIR O ARQUIVO!\n");
   }
   else{
-    printf("SALVO COM SUCESSO!\n");
+    printf("Salvo com sucesso!\n");
   }
 
   fprintf(info_quartos, "Numero do quarto:%d\nDisponibilidade:%d\nLocalizacao:%s\nPreco:%.2f\n", cadastrar_quarto->numero_quarto, cadastrar_quarto->disponibilidade, cadastrar_quarto->localizacao, cadastrar_quarto->preco);
@@ -55,7 +55,7 @@ List *inserir_quarto(List *lista, Quarto *novo_quarto){
   return novo;
 }
 
-List *cria(){
+List *cria_ls(){
   return NULL;
 }
 
@@ -65,8 +65,8 @@ void Quartos_disponiveis(List *lista, int numero){
 	for(percorre=lista; percorre != NULL; percorre=percorre->next){
 		if(percorre->dados->disponibilidade == numero){
 			printf("Numero: %d\n", percorre->dados->numero_quarto);
-			printf("Preço: %.2f\n", percorre->dados->preco);
-			printf("Localização: %s\n", percorre->dados->localizacao);
+			printf("Preco: %.2f\n", percorre->dados->preco);
+			printf("Localizacao: %s\n", percorre->dados->localizacao);
 		}
 	}
 }

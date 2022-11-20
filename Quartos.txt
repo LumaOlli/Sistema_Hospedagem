@@ -1,0 +1,8 @@
+Numero do quarto:213
+Disponibilidade:1
+Localizacao:av. independencia
+Preco:250.00
+Numero do quarto:214
+Disponibilidade:2
+Localizacao:av. principal
+Preco:254.89

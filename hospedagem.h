@@ -20,7 +20,7 @@ void listar_reserva();
 Lista * insere_hospede(Lista *lista, Hospede *elemento);
 
 /**/
-Lista* cria_ls(); 
+Lista* cria_ls_hosp(); 
 
 /**/
 Lista* excluir_reserva(Lista *lista, int elemento);
