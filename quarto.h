@@ -22,3 +22,7 @@ List *cria_ls();
 List *excluir_reservaQ(List *list, int numero_identificacao);
 
 /**/
+void Listar_reservaQ(List* list);
+
+/**/
+

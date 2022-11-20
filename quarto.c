@@ -80,6 +80,19 @@ List *excluir_reservaQ(List *list, int numero_identificacao){
 	return list;	
 }
 
+void Listar_reservaQ(List* list){
+
+	List*p;
+
+	for(p=list; p!=NULL; p=p->next){
+		printf("Numero do quarto = %d \n", p->dados->numero_quarto);
+		printf("Localizacao = %s \n", p->dados->localizacao);
+		printf("Disponibilidade = %d \n", p->dados->disponibilidade);
+    printf("Preco = %.2f \n", p->dados->preco);
+	}
+
+}
+
 /*void Quartos_disponiveis(List *list, int numero){
 	List *percorre;
 

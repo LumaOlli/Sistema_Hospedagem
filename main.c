@@ -104,7 +104,7 @@ int main(void){
                 printf("Informe o numero de hospede: ");
                 scanf("%d", &exc_hospede);
                 lista = excluir_reserva(lista, exc_hospede);
-                printf("Informe o numero de hospede: ");
+                printf("Informe o numero do quarto: ");
                 scanf("%d", &exc_quarto);
                 list = excluir_reservaQ(list, exc_quarto);
                 printf("Excluido com Sucesso!\n");
@@ -113,6 +113,7 @@ int main(void){
 
             case OPCAO3:
                 Listar_reserva(lista);
+                Listar_reservaQ(list);
                 break;
 
             case OPCAO4:
