@@ -3,6 +3,7 @@
 #include <string.h>
 #include <windows.h>
 #include "hospedagem.c"
+#include "quarto.c"
 
 #define TITULO_OPCAO1 "realizar reserva"
 #define TITULO_OPCAO2 "excluir reserva"
@@ -76,6 +77,7 @@ int main(void){
     int exc_reserva;
     int buscar_reserva;
     int edit_reserva;
+    Quarto *cadastra;
 
     do{
         printf("\n");
@@ -89,8 +91,10 @@ int main(void){
 
         switch(op){
             case OPCAO1:
+                Beep(1000,500);
                 reserva = realizar_reserva();
                 lista = insere(lista, reserva);
+                cadastra = reservar_quarto();
                 break;
 
             case OPCAO2:

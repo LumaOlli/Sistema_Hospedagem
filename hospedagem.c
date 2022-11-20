@@ -35,7 +35,7 @@ Hospede *realizar_reserva(void){
 	if(arquivo_hosp == NULL){
 	    printf("Erro ao abrir arquivo");
 	} else{
-	    printf("Salvo com sucesso!");
+	    printf("Salvo com sucesso!\n");
 	}
     fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\nNumero do hospede:%d\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento, nova_reserva->numero_do_hospede);
     fclose(arquivo_hosp);
@@ -116,5 +116,5 @@ void Editar_reserva(Lista *lista, int numero_informado){
 }
 
 void quartos_disponiveis(Lista *lista){
-	
+
 }
