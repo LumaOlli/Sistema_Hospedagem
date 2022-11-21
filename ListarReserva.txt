@@ -1,4 +1,0 @@
-Nome: alencar
-Tempo de reserva:6
-Documento: 789
-Numero do hospede:3

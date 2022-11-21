@@ -128,7 +128,7 @@ void Editar_reservaQ(List *list, int numero_identificacao){
 /*void Quartos_disponiveis(List *list, int numero){
 	List *percorre;
 
-	for(percorre=lista; percorre != NULL; percorre=percorre->next){
+	for(percorre=list; percorre != NULL; percorre=percorre->next){
 		if(percorre->dados->disponibilidade == numero){
 			printf("Numero: %d\n", percorre->dados->numero_quarto);
 			printf("Preco: %.2f\n", percorre->dados->preco);			
