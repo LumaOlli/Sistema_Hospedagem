@@ -31,7 +31,7 @@ void Listar_reservaQ(List* list);
 buscar na lista um determindo quarto informado pelo usuário*/
 void Buscar_reservaQ(int numero_identificao, List* list);
 
-<<<<<<< HEAD
+
 /*Função que recebe como parâmetro as variáveis list, do tipo List, e número indentificado, do tipo int, é responsável por buscar um
 derteminado quarto e editar as informações do derteminado quarto*/
 void Editar_reservaQ(List *list, int numero_identificacao);
@@ -39,7 +39,3 @@ void Editar_reservaQ(List *list, int numero_identificacao);
 /*Função que recebe como parâmetro as variáveis list, do tipo List, e número, do tipo int, é responsável por mostrar a quantidade de 
 quartos disponiveis*/
 void Quartos_disponiveis(List *list, int numero);
-=======
-/**/
-void Editar_reservaQ(List *list, int numero_identificacao);
->>>>>>> 0fa0d5fd4a9eb2571cd55a34d9ea5165885f8c4c
