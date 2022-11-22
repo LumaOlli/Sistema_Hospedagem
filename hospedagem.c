@@ -33,7 +33,7 @@ Hospede *realizar_reservaH(void){
 	arquivo_hosp = fopen("ListarReserva.txt", "a"); 
 	
 	if(arquivo_hosp == NULL){
-	    printf("Erro ao abrir arquivo");
+	    printf("Erro ao abrir arquivo\n");
 	} else{
 	    printf("Salvo com sucesso!\n");
 	}
@@ -44,10 +44,35 @@ Hospede *realizar_reservaH(void){
 }	
 
 Lista *insere_hospede(Lista *lista, Hospede *elemento){
-    Lista *nova = (Lista*) malloc(sizeof(Lista));
+    
+	Lista *novo;
+	Lista *ant = NULL;
+	Lista *percorre = lista;
+
+	while(percorre != NULL && percorre->info<elemento){
+		ant = percorre;
+		percorre = percorre->prox;
+	}
+
+	novo = (Lista*)malloc(sizeof(Lista));
+
+	novo->info = elemento;
+
+	if(ant == NULL){
+		novo->info = lista;
+		lista = novo;
+	}
+	else{
+		novo->prox = ant->prox;
+		ant->prox = novo;
+	}
+
+	return lista;
+	
+	/*Lista *nova = (Lista*) malloc(sizeof(Lista));
     nova->info = elemento;
     nova->prox = lista;
-    return nova;
+    return nova;*/
 }
 
 Lista* cria_ls_hosp(){
@@ -75,9 +100,9 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 	return lista;	
 }
 
-Lista* Listar_reservaH(Lista* lista, Hospede *elemento){
+void Listar_reservaH(Lista* lista){
 
-	Lista *novo;
+	/*Lista *novo;
 	Lista *ant = NULL;
 	Lista *per = lista;
 
@@ -99,7 +124,7 @@ Lista* Listar_reservaH(Lista* lista, Hospede *elemento){
 		ant->prox = novo;
 	}
 
-	return lista;
+	return lista;*/
 
 	Lista*percorre;
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
