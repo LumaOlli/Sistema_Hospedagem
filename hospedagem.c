@@ -122,20 +122,13 @@ int lista_vazia(Lista *lista){
 }
 
 void quantitativo_de_hospede(Lista *lista){
-	int i=0, j;
+	Lista *percorre;
 
-	if(lista_vazia(lista)){
-		printf("A lista esta vaizia!\n");
-	
-	
-	}else{
-		for(j = 0; j> lista != NULL; j++){
-			
-			printf("%d", lista->info);
-			lista = lista->prox;
-			i++;
-		}
+	int i = 0;
 
-		printf("\nHa %d hospedes!!\n", i);
+	for(percorre=lista; percorre!=NULL; percorre =percorre -> prox){
+	i++;
 	}
+
+	printf("Quantidade de hospedes eh %d\n", i);
 }
