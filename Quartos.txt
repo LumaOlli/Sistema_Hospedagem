@@ -1,0 +1,13 @@
+
+Numero do quarto:211
+Disponibilidade:2
+Localizacao:fifi
+Preco:87.00
+Numero do quarto:212
+Disponibilidade:1
+Localizacao:fiufiu
+Preco:81.00
+Numero do quarto:213
+Disponibilidade:1
+Localizacao:caixa preta
+Preco:87.00

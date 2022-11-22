@@ -80,7 +80,6 @@ int main(void){
     int edit_hospede, edit_quarto;
     int dispo_quarto;
     Quarto *cadastra;
-    Lista *listar;
 
     do{
         printf("\n");
@@ -113,7 +112,7 @@ int main(void){
                 break;
 
             case OPCAO3:
-                lista = Listar_reservaH(lista, elemento);
+                Listar_reservaH(lista, reserva);
                 Listar_reservaQ(list);
                 break;
 
