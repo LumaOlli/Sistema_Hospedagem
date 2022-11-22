@@ -102,30 +102,6 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 
 void Listar_reservaH(Lista* lista){
 
-	/*Lista *novo;
-	Lista *ant = NULL;
-	Lista *per = lista;
-
-	while(per != NULL && per->info<elemento){
-		ant = per;
-		per = per->prox;
-	}
-
-	novo = (Lista*)malloc(sizeof(Lista));
-
-	novo->info = elemento;
-
-	if(ant == NULL){
-		novo->info = lista;
-		lista = novo;
-	}
-	else{
-		novo->prox = ant->prox;
-		ant->prox = novo;
-	}
-
-	return lista;*/
-
 	Lista*percorre;
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
 		printf("Nome = %s \n", percorre->info->nome);
