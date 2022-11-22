@@ -95,15 +95,15 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 	return lista;	
 }
 
-void Listar_reservaH(Lista* lista){
+void Listar_reservaH(Lista *lista){
 	Lista*percorre;
 
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
 		printf("Nome = %s \n", percorre->info->nome);
-		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
+    	printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
 		printf("Documento = %s \n", percorre->info->documento);
+    	printf("Numero do hospede = %d \n", percorre->info->numero_do_hospede);
 	}
-
 }
 
 void Buscar_reservaH(int numero_informado, Lista* lista){
@@ -122,7 +122,7 @@ void Buscar_reservaH(int numero_informado, Lista* lista){
 void Editar_reservaH(Lista *lista, int numero_informado){
 	Lista *percorre;
 	
-	for(percorre = lista ;percorre != NULL;percorre = percorre->prox){
+	for(percorre = lista; percorre != NULL; percorre = percorre->prox){
 		if(percorre->info->numero_do_hospede == numero_informado){
 			printf("Informe o novo nome:\n");
 			scanf(" %[^\n]", percorre->info->nome);
@@ -142,11 +142,11 @@ int lista_vazia(Lista *lista){
 void quantitativo_de_hospede(Lista *lista){
 	int i=0, j;
 
-	if(lista_vazia(lista))
+	if(lista_vazia(lista)){
 		printf("A lista esta vaizia!\n");
 	
 	
-	else{
+	}else{
 		for(j = 0; j> lista != NULL; j++){
 			
 			printf("%d", lista->info);
