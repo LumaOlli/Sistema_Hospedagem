@@ -125,7 +125,7 @@ void Editar_reservaQ(List *list, int numero_identificacao){
 
 }
 
-/*void Quartos_disponiveis(List *list, int numero){
+void Quartos_disponiveis(List *list, int numero){
 	List *percorre;
 
 	for(percorre=list; percorre != NULL; percorre=percorre->next){
@@ -135,4 +135,4 @@ void Editar_reservaQ(List *list, int numero_identificacao){
       printf("Localizacao: %s\n", percorre->dados->localizacao);
 		}
 	}
-}*/
+}

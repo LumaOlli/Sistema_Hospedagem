@@ -114,3 +114,30 @@ void Editar_reservaH(Lista *lista, int numero_informado){
 	}
 
 }
+
+Lista *insere_ordenado(Lista *lista, Hospede *elemento){
+
+	Lista *novo;
+	Lista *ant = NULL;
+	Lista *per = lista;
+
+	while(per != NULL && per->info>elemento){
+		ant = per;
+		per = per->prox;
+	}
+
+	novo = (Lista*)malloc(sizeof(Lista));
+
+	novo->info = elemento;
+
+	if(ant == NULL){
+		novo->info = lista;
+		lista = novo;
+	}
+	else{
+		novo->prox = ant->prox;
+		ant->prox = novo;
+	}
+
+	return lista;
+}
