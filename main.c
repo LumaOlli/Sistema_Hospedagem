@@ -112,7 +112,7 @@ int main(void){
                 break;
 
             case OPCAO3:
-                lista = Listar_reservaH(lista, elemento);
+                Listar_reservaH(lista);
                 Listar_reservaQ(list);
                 break;
 
