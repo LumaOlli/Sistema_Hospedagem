@@ -16,7 +16,7 @@ List *inserir_quarto(List *list, Quarto *novo_quarto);
 List *cria_ls();
 
 /*Função que irá olhar quantos quartos estão disponíveis no hotel*/
-//void Quartos_disponiveis(List *list, int numero);
+void Quartos_disponiveis(List *list, int numero);
 
 /**/
 List *excluir_reservaQ(List *list, int numero_identificacao);
@@ -29,5 +29,3 @@ void Buscar_reservaQ(int numero_identificao, List* list);
 
 /**/
 void Editar_reservaQ(List *list, int numero_identificacao);
-
-/**/
