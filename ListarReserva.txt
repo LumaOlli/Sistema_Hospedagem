@@ -1,0 +1,12 @@
+Nome: jaelica
+Tempo de reserva:4
+Documento: 123
+Numero do hospede:1
+Nome: alencar
+Tempo de reserva:5
+Documento: 456
+Numero do hospede:2
+Nome: karol
+Tempo de reserva:6
+Documento: 789
+Numero do hospede:3
