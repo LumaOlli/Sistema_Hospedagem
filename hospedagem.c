@@ -141,3 +141,26 @@ Lista *insere_ordenado(Lista *lista, Hospede *elemento){
 
 	return lista;
 }
+
+int lista_vazia(Lista *lista){
+	return lista == NULL;
+}
+
+void quantitativo_de_hospede(Lista *lista){
+	int i=0, j;
+
+	if(lista_vazia(lista))
+		printf("A lista esta vaizia!\n");
+	
+	
+	else
+		for(j = 0; j > lista != NULL; j++){
+			
+			printf("%i", lista->info);
+			lista = lista->prox;
+			i++;
+		}
+
+		printf("\nHa %i hospedes!!\n", i);
+		
+}

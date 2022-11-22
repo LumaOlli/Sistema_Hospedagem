@@ -143,7 +143,7 @@ int main(void){
                 break;
 
             case OPCAO7:
-
+                quantitativo_de_hospede(lista);
                 break; 
 
             case OPCAO8:
