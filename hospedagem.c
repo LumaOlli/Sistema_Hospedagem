@@ -68,11 +68,6 @@ Lista *insere_hospede(Lista *lista, Hospede *elemento){
 	}
 
 	return lista;
-	
-	/*Lista *nova = (Lista*) malloc(sizeof(Lista));
-    nova->info = elemento;
-    nova->prox = lista;
-    return nova;*/
 }
 
 Lista* cria_ls_hosp(){
@@ -101,32 +96,8 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 }
 
 void Listar_reservaH(Lista* lista){
-
-	/*Lista *novo;
-	Lista *ant = NULL;
-	Lista *per = lista;
-
-	while(per != NULL && per->info<elemento){
-		ant = per;
-		per = per->prox;
-	}
-
-	novo = (Lista*)malloc(sizeof(Lista));
-
-	novo->info = elemento;
-
-	if(ant == NULL){
-		novo->info = lista;
-		lista = novo;
-	}
-	else{
-		novo->prox = ant->prox;
-		ant->prox = novo;
-	}
-
-	return lista;*/
-
 	Lista*percorre;
+
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
 		printf("Nome = %s \n", percorre->info->nome);
 		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
@@ -175,8 +146,8 @@ void quantitativo_de_hospede(Lista *lista){
 		printf("A lista esta vaizia!\n");
 	
 	
-	else
-		for(j = 0; j > lista != NULL; j++){
+	else{
+		for(j = 0; j> lista != NULL; j++){
 			
 			printf("%d", lista->info);
 			lista = lista->prox;
@@ -184,5 +155,5 @@ void quantitativo_de_hospede(Lista *lista){
 		}
 
 		printf("\nHa %d hospedes!!\n", i);
-		
+	}
 }
