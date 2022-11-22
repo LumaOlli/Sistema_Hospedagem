@@ -45,29 +45,11 @@ Hospede *realizar_reservaH(void){
 
 Lista *insere_hospede(Lista *lista, Hospede *elemento){
     
-	Lista *novo;
-	Lista *ant = NULL;
-	Lista *percorre = lista;
+	Lista *novo_hosp = (Lista*) malloc (sizeof(Lista));
+  	novo_hosp->info = elemento;
+  	novo_hosp->prox = lista;
 
-	while(percorre != NULL && percorre->info<elemento){
-		ant = percorre;
-		percorre = percorre->prox;
-	}
-
-	novo = (Lista*)malloc(sizeof(Lista));
-
-	novo->info = elemento;
-
-	if(ant == NULL){
-		novo->info = lista;
-		lista = novo;
-	}
-	else{
-		novo->prox = ant->prox;
-		ant->prox = novo;
-	}
-
-	return lista;
+  	return novo_hosp;
 }
 
 Lista* cria_ls_hosp(){
