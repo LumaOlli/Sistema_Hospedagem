@@ -24,7 +24,7 @@ Lista * insere_hospede(Lista *lista, Hospede *elemento);
 Lista* cria_ls_hosp(); 
 
 /*Função que recebe como parâmetro a variável lista do tipo lista, onde vai ser imprimido na tela os dados do hospede*/
-void Listar_reservaH(Lista* lista);
+void Listar_reservaH(Lista *lista);
 
 /*Função que recebe como parâmetros numero informado do tipo int e lista do tipo Lista, a função irá buscar uma 
 reserva específica na lista dos hospedes do hotel e retornar a lista atualizada*/

@@ -68,11 +68,6 @@ Lista *insere_hospede(Lista *lista, Hospede *elemento){
 	}
 
 	return lista;
-	
-	/*Lista *nova = (Lista*) malloc(sizeof(Lista));
-    nova->info = elemento;
-    nova->prox = lista;
-    return nova;*/
 }
 
 Lista* cria_ls_hosp(){
@@ -100,15 +95,20 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 	return lista;	
 }
 
+<<<<<<< HEAD
 void Listar_reservaH(Lista* lista){
 
+=======
+void Listar_reservaH(Lista *lista){
+>>>>>>> 0fa0d5fd4a9eb2571cd55a34d9ea5165885f8c4c
 	Lista*percorre;
+
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
 		printf("Nome = %s \n", percorre->info->nome);
-		printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
+    	printf("Tempo de duracao = %d \n", percorre->info->duracao_de_estadia);
 		printf("Documento = %s \n", percorre->info->documento);
+    	printf("Numero do hospede = %d \n", percorre->info->numero_do_hospede);
 	}
-
 }
 
 void Buscar_reservaH(int numero_informado, Lista* lista){
@@ -127,7 +127,7 @@ void Buscar_reservaH(int numero_informado, Lista* lista){
 void Editar_reservaH(Lista *lista, int numero_informado){
 	Lista *percorre;
 	
-	for(percorre = lista ;percorre != NULL;percorre = percorre->prox){
+	for(percorre = lista; percorre != NULL; percorre = percorre->prox){
 		if(percorre->info->numero_do_hospede == numero_informado){
 			printf("Informe o novo nome:\n");
 			scanf(" %[^\n]", percorre->info->nome);
@@ -147,18 +147,18 @@ int lista_vazia(Lista *lista){
 void quantitativo_de_hospede(Lista *lista){
 	int i=0, j;
 
-	if(lista_vazia(lista))
+	if(lista_vazia(lista)){
 		printf("A lista esta vaizia!\n");
 	
 	
-	else
-		for(j = 0; j > lista != NULL; j++){
+	}else{
+		for(j = 0; j> lista != NULL; j++){
 			
-			printf("%i", lista->info);
+			printf("%d", lista->info);
 			lista = lista->prox;
 			i++;
 		}
 
-		printf("\nHa %i hospedes!!\n", i);
-		
+		printf("\nHa %d hospedes!!\n", i);
+	}
 }

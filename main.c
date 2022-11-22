@@ -110,7 +110,7 @@ int main(void){
                 printf("Excluido com Sucesso!\n");
                 Beep(1000,500);
                 break;
-
+                
             case OPCAO3:
                 Listar_reservaH(lista);
                 Listar_reservaQ(list);

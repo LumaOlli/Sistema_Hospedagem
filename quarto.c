@@ -81,7 +81,6 @@ List *excluir_reservaQ(List *list, int numero_identificacao){
 }
 
 void Listar_reservaQ(List* list){
-
 	List*p;
 
 	for(p=list; p!=NULL; p=p->next){
