@@ -178,11 +178,11 @@ void quantitativo_de_hospede(Lista *lista){
 	else
 		for(j = 0; j > lista != NULL; j++){
 			
-			printf("%i", lista->info);
+			printf("%d", lista->info);
 			lista = lista->prox;
 			i++;
 		}
 
-		printf("\nHa %i hospedes!!\n", i);
+		printf("\nHa %d hospedes!!\n", i);
 		
 }
