@@ -80,6 +80,7 @@ int main(void){
     int edit_hospede, edit_quarto;
     int dispo_quarto;
     Quarto *cadastra;
+    Lista *listar;
 
     do{
         printf("\n");
@@ -96,8 +97,6 @@ int main(void){
                 Beep(1000,500);
                 reserva = realizar_reservaH();
                 lista = insere_hospede(lista, reserva);
-                lista = insere_ordenado(lista, reserva);
-                printf("\nordenacao feita com sucesso!\n");
                 cadastra = reservar_quarto();
                 list = inserir_quarto(list, cadastra);
                 break;
@@ -114,7 +113,7 @@ int main(void){
                 break;
 
             case OPCAO3:
-                Listar_reservaH(lista);
+                listar = Listar_reservaH(lista);
                 Listar_reservaQ(list);
                 break;
 

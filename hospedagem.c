@@ -75,7 +75,31 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 	return lista;	
 }
 
-void Listar_reservaH(Lista* lista){
+Lista* Listar_reservaH(Lista* lista, Hospede *elemento){
+
+	Lista *novo;
+	Lista *ant = NULL;
+	Lista *per = lista;
+
+	while(per != NULL && per->info<elemento){
+		ant = per;
+		per = per->prox;
+	}
+
+	novo = (Lista*)malloc(sizeof(Lista));
+
+	novo->info = elemento;
+
+	if(ant == NULL){
+		novo->info = lista;
+		lista = novo;
+	}
+	else{
+		novo->prox = ant->prox;
+		ant->prox = novo;
+	}
+
+	return lista;
 
 	Lista*percorre;
 	for(percorre=lista; percorre!=NULL; percorre=percorre->prox){
@@ -113,33 +137,6 @@ void Editar_reservaH(Lista *lista, int numero_informado){
 		}
 	}
 
-}
-
-Lista *insere_ordenado(Lista *lista, Hospede *elemento){
-
-	Lista *novo;
-	Lista *ant = NULL;
-	Lista *per = lista;
-
-	while(per != NULL && per->info>elemento){
-		ant = per;
-		per = per->prox;
-	}
-
-	novo = (Lista*)malloc(sizeof(Lista));
-
-	novo->info = elemento;
-
-	if(ant == NULL){
-		novo->info = lista;
-		lista = novo;
-	}
-	else{
-		novo->prox = ant->prox;
-		ant->prox = novo;
-	}
-
-	return lista;
 }
 
 int lista_vazia(Lista *lista){
