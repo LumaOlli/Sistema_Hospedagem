@@ -5,14 +5,14 @@
 #include "hospedagem.c"
 #include "quarto.c"
 
-#define TITULO_OPCAO1 "realizar reserva"
-#define TITULO_OPCAO2 "excluir reserva"
-#define TITULO_OPCAO3 "listar reserva"
-#define TITULO_OPCAO4 "buscar reserva"
-#define TITULO_OPCAO5 "editar reserva"
-#define TITULO_OPCAO6 "consultar quartos disponiveis"
-#define TITULO_OPCAO7 "consultar quantitativo de hospedes"
-#define TITULO_OPCAO8 "sair do programa"
+#define TITULO_OPCAO1 "Realizar Reserva"
+#define TITULO_OPCAO2 "Excluir Reserva"
+#define TITULO_OPCAO3 "Listar Reserva"
+#define TITULO_OPCAO4 "Buscar Reserva"
+#define TITULO_OPCAO5 "Editar Reserva"
+#define TITULO_OPCAO6 "Consultar Quartos Disponiveis"
+#define TITULO_OPCAO7 "Consultar Quantitativo de Hospedes"
+#define TITULO_OPCAO8 "Sair do Programa"
 
 #define N_OPCOES 8
 #define OPCAO1 '1'
@@ -81,6 +81,9 @@ int main(void){
     int dispo_quarto;
     Quarto *cadastra;
 
+    printf("\n===============================\n");
+    printf("             MENU              \n");
+    printf("===============================\n");
     do{
         printf("\n");
         ApresentaMenu (N_OPCOES, OPCAO1,
@@ -93,60 +96,107 @@ int main(void){
 
         switch(op){
             case OPCAO1:
+                printf("\n===============================\n");
+                printf("       Realizar Reserva        \n");
+                printf("===============================\n");
                 Beep(1000,500);
+                printf("\n");
                 reserva = realizar_reservaH();
                 lista = insere_hospede(lista, reserva);
+                printf("\n");
                 cadastra = reservar_quarto();
                 list = inserir_quarto(list, cadastra);
+                system("cls");
+                printf("\n");
                 break;
 
             case OPCAO2:
+                printf("\n===============================\n");
+                printf("       Excluir Reserva         \n");
+                printf("===============================\n");
                 printf("Informe o numero de hospede: ");
                 scanf("%d", &exc_hospede);
                 lista = excluir_reservaH(lista, exc_hospede);
+                printf("\n");
                 printf("Informe o numero do quarto: ");
                 scanf("%d", &exc_quarto);
                 list = excluir_reservaQ(list, exc_quarto);
+                printf("\n");
                 printf("Excluido com Sucesso!\n");
+                printf("\n");
+                system("cls");
                 Beep(1000,500);
                 break;
                 
             case OPCAO3:
+                printf("\n===============================\n");
+                printf("        Listar Reserva         \n");
+                printf("===============================\n");
+                printf("Hospedes\n");
                 Listar_reservaH(lista);
+                printf("Quartos\n");
                 Listar_reservaQ(list);
+                printf("\n");
+                system("cls");
                 break;
 
             case OPCAO4:
+                printf("\n===============================\n");
+                printf("        Buscar Reserva         \n");
+                printf("===============================\n");
                 printf("Informe o numero de hospede:");
                 scanf("%d", &buscar_hospede);
                 Buscar_reservaH(buscar_hospede, lista);
+                printf("\n");
                 printf("Informe o numero do quarto:");
                 scanf("%d", &buscar_quarto);
                 Buscar_reservaQ(buscar_quarto, list);
+                printf("\n");
+                system("cls");
                 break;
 
             case OPCAO5:
+                printf("\n===============================\n");
+                printf("        Editar Reserva         \n");
+                printf("===============================\n");
                 printf("Informe o numero de hospede:");
                 scanf("%d", &edit_hospede);
                 Editar_reservaH(lista, edit_hospede);
+                printf("\n");
                 printf("Informe o numero do quarto:");
                 scanf("%d", &edit_quarto);
                 Editar_reservaQ(list, edit_quarto);
+                printf("\n");
+                system("cls");
                 break;
 
             case OPCAO6:
+                printf("\n======================================\n");
+                printf("    Consultar Quartos Disponiveis     \n");
+                printf("======================================\n");
                 printf("Informe <1> para verificar a disponibilidade dos quartos:");
                 scanf("%d", &dispo_quarto);
                 Quartos_disponiveis(list, dispo_quarto);
+                printf("\n");
+                system("cls");
                 break;
 
             case OPCAO7:
+                printf("\n============================================\n");
+                printf("    Consultar Quatitativos de  Hospedes     \n");
+                printf("============================================\n");
                 quantitativo_de_hospede(lista);
+                printf("\n");
+                system("cls");
                 break; 
 
             case OPCAO8:
                 saida = 1;
                 printf("Obrigado por usar este programa\n");
+                printf("\n======================\n");
+                printf("     Tchau ;)       \n");
+                printf("    Boas ferias     \n");
+                printf("====================\n");
                 break;
         
             default:
