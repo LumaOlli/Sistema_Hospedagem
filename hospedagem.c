@@ -130,5 +130,5 @@ void quantitativo_de_hospede(Lista *lista){
 	i++;
 	}
 
-	printf("Quantidade de hospedes eh %d\n", i);
+	printf("Quantidade de hospedes  (%d)\n", i);
 }
