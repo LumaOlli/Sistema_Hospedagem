@@ -40,4 +40,5 @@ int lista_vazia(Lista *lista);
 /*Função que recebe como parâmetro lista do tipo lista, responsável por verificar quantos hospedes tem na lista*/
 void quantitativo_de_hospede(Lista *lista);
 
+/*Função que recebe como parâmetro a variável list, do tipo List, é responsável por atualizar o arquovo txt*/
 void Listartxt(Lista *lista);

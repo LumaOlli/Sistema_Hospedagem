@@ -39,5 +39,5 @@ void Editar_reservaQ(List *list, int numero_identificacao);
 quartos disponiveis*/
 void Quartos_disponiveis(List *list, int numero);
 
-/**/
+/*Função que recebe como parâmetro a variável list, do tipo List, é responsável por atualizar o arquovo txt*/
 void listartxt_Q(List* list);

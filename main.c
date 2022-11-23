@@ -196,7 +196,9 @@ int main(void){
                 printf("\n======================\n");
                 printf("     Tchau ;)       \n");
                 printf("    Boas ferias     \n");
-                printf("====================\n");
+                printf("=====================\n");
+                printf("\nASS: desenvolvedoras Amanda Alencar e Luma Oliveira!!\n");
+                Beep(1000,500);
                 break;
         
             default:

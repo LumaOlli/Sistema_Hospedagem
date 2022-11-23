@@ -57,8 +57,8 @@ List *excluir_reservaQ(List *list, int numero_identificacao){
 		ant=p;
     p=p->next;
 	}
-	/*Fazendo exclução*/
-	if(ant == NULL){//caso seja no inicio do elemento
+	
+	if(ant == NULL){
 		list=p->next;
 	}
 	else{

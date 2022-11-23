@@ -57,8 +57,8 @@ Lista* excluir_reservaH(Lista *lista, int numero_informado){
 		anterior = percorre;
         percorre =percorre->prox;
 	}
-	/*Fazendo exclução*/
-	if(anterior == NULL){//caso seja no inicio do elemento
+	
+	if(anterior == NULL){
 		lista=percorre->prox;
 	}
 	else{
