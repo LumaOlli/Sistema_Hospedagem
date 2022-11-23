@@ -29,19 +29,10 @@ Hospede *realizar_reservaH(void){
 	printf("Informe o numero do hospede: \n");
 	scanf("%d", &nova_reserva->numero_do_hospede);
 
-	FILE *arquivo_hosp;
-	arquivo_hosp = fopen("ListarReserva.txt", "a"); 
-	
-	if(arquivo_hosp == NULL){
-	    printf("Erro ao abrir arquivo\n");
-	} else{
-	    printf("Salvo com sucesso!\n");
-	}
-    fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\nNumero do hospede:%d\n", nova_reserva->nome, nova_reserva->duracao_de_estadia, nova_reserva->documento, nova_reserva->numero_do_hospede);
-    fclose(arquivo_hosp);
-
 	return nova_reserva;
 }	
+
+
 
 Lista *insere_hospede(Lista *lista, Hospede *elemento){
     
@@ -86,6 +77,25 @@ void Listar_reservaH(Lista *lista){
 		printf("Documento = %s \n", percorre->info->documento);
     	printf("Numero do hospede = %d \n", percorre->info->numero_do_hospede);
 	}
+}
+
+void Listartxt(Lista *lista){
+	Lista *percorre;
+
+	 FILE *arquivo_hosp;
+	arquivo_hosp = fopen("ListarReserva.txt", "a"); 
+	
+	if(arquivo_hosp == NULL){
+	    printf("Erro ao abrir arquivo\n");
+	} else{
+	    printf("Salvo com sucesso!\n");
+
+        for(percorre=lista; percorre !=NULL; percorre=percorre->prox){
+		    fprintf(arquivo_hosp,"Nome: %s\nTempo de reserva:%d\nDocumento: %s\nNumero do hospede:%d\n", percorre->info->nome, percorre->info->duracao_de_estadia, percorre->info->documento, percorre->info->numero_do_hospede);
+            fclose(arquivo_hosp);
+	    }
+	}
+            		
 }
 
 void Buscar_reservaH(int numero_informado, Lista* lista){

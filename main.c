@@ -73,6 +73,10 @@ int main(void){
     unsigned char op;
     unsigned int saida = 0;
     Hospede *reserva;
+
+    Lista*percorre;
+    List *p;
+
     Lista *lista = cria_ls_hosp();
     List *list = cria_ls();
     int exc_hospede, exc_quarto;
@@ -124,7 +128,6 @@ int main(void){
                 printf("\n");
                 printf("Excluido com Sucesso!\n");
                 printf("\n");
-                system("cls");
                 Beep(1000,500);
                 break;
                 
@@ -137,7 +140,6 @@ int main(void){
                 printf("Quartos\n");
                 Listar_reservaQ(list);
                 printf("\n");
-                system("cls");
                 break;
 
             case OPCAO4:
@@ -152,7 +154,6 @@ int main(void){
                 scanf("%d", &buscar_quarto);
                 Buscar_reservaQ(buscar_quarto, list);
                 printf("\n");
-                system("cls");
                 break;
 
             case OPCAO5:
@@ -167,7 +168,6 @@ int main(void){
                 scanf("%d", &edit_quarto);
                 Editar_reservaQ(list, edit_quarto);
                 printf("\n");
-                system("cls");
                 break;
 
             case OPCAO6:
@@ -178,7 +178,6 @@ int main(void){
                 scanf("%d", &dispo_quarto);
                 Quartos_disponiveis(list, dispo_quarto);
                 printf("\n");
-                system("cls");
                 break;
 
             case OPCAO7:
@@ -187,10 +186,11 @@ int main(void){
                 printf("============================================\n");
                 quantitativo_de_hospede(lista);
                 printf("\n");
-                system("cls");
                 break; 
 
             case OPCAO8:
+                Listartxt(lista);
+                listartxt_Q(list);
                 saida = 1;
                 printf("Obrigado por usar este programa\n");
                 printf("\n======================\n");

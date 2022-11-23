@@ -39,3 +39,5 @@ int lista_vazia(Lista *lista);
 
 /*Função que recebe como parâmetro lista do tipo lista, responsável por verificar quantos hospedes tem na lista*/
 void quantitativo_de_hospede(Lista *lista);
+
+void Listartxt(Lista *lista);

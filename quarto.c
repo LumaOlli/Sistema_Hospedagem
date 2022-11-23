@@ -31,18 +31,6 @@ Quarto *reservar_quarto(void){
   printf("Informe o valor do quarto: ");
   scanf("%f", &cadastrar_quarto->preco);
 
-  FILE *info_quartos = fopen("Quartos.txt", "a");
-
-  if(info_quartos == NULL){
-    printf("ERRO AO ABRIR O ARQUIVO!\n");
-  }
-  else{
-    printf("Salvo com sucesso!\n");
-  }
-
-  fprintf(info_quartos, "Numero do quarto:%d\nDisponibilidade:%d\nLocalizacao:%s\nPreco:%.2f\n", cadastrar_quarto->numero_quarto, cadastrar_quarto->disponibilidade, cadastrar_quarto->localizacao, cadastrar_quarto->preco);
-
-  fclose(info_quartos);
   return cadastrar_quarto;
 }
 
@@ -89,6 +77,25 @@ void Listar_reservaQ(List* list){
 		printf("Localizacao = %s \n", p->dados->localizacao);
     printf("Preco = %.2f \n", p->dados->preco);
 	}
+
+}
+
+void listartxt_Q(List* list){
+  List*p;
+
+  FILE *info_quartos = fopen("Quartos.txt", "a");
+
+  if(info_quartos == NULL){
+    printf("ERRO AO ABRIR O ARQUIVO!\n");
+  }
+  else{
+    printf("Salvo com sucesso!\n");
+
+    for(p =list; p !=NULL; p =p->next){
+      fprintf(info_quartos, "Numero do quarto:%d\nDisponibilidade:%d\nLocalizacao:%s\nPreco:%.2f\n", p->dados->numero_quarto, p->dados->disponibilidade, p->dados->localizacao, p->dados->preco);
+      fclose(info_quartos);
+    }
+  }
 
 }
 
